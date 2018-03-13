@@ -2,5 +2,5 @@
 using namespace std;
 
 class FishFood{
-    int speed;
+    const int speed;
 };

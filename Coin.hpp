@@ -4,7 +4,7 @@ using namespace std;
 class Coin{
 private:
     int value;
-    int xPos;
+    const int xPos;
     int yPos;
 public:
     Coin();
