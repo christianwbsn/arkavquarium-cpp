@@ -1,11 +1,18 @@
+#ifndef __SNAIL_HPP
+#define __SNAIL_HPP
 #include <iostream>
 using namespace std;
 
 class Snail{
 private:
     int xPos;
-    int yPos;
+    const int yPos;
 public:
     Snail();
-    void eatCoin();
+
+    int getXPos() const;
+    int getYPos() const;
+    
+    void move(int, int);
 };
+#endif
