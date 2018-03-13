@@ -1,5 +1,6 @@
-#include <iostream>
-using namespace std;
+// File: Snail.hpp
+#ifndef __SNAIL__HPP
+#define __SNAIL__HPP
 
 class Snail{
 private:
@@ -9,3 +10,5 @@ public:
     Snail();
     void eatCoin();
 };
+
+#endif
