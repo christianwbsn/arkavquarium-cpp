@@ -26,6 +26,7 @@ public:
     //Bergerak sesuai dengan status
     void move(int, int);
 
+    //Getter
     int getXPos() const;
     int getYPos() const;
     int getSize() const;

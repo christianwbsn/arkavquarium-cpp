@@ -6,9 +6,12 @@ using namespace std;
 
 class Piranha : public Fish{
     public:
+        //konstruktor
         Piranha();
         
-        void extractCoin(int);
+        //mengeluarkan coin
+        Coin extractCoin(int);
+        //memakan makanan
         void eatFood();
 };
 #endif

@@ -9,11 +9,14 @@ private:
     const int xPos;
     int yPos;
 public:
+    //konstruktor
     Coin(int,int,int);
 
+    //getter
     int getXPos() const;
     int getYPos() const;
     
+    //move
     void move();
 
 };

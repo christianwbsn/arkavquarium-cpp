@@ -8,11 +8,14 @@ private:
     int xPos;
     const int yPos;
 public:
+    //konstruktor
     Snail();
 
+    //getter
     int getXPos() const;
     int getYPos() const;
     
+    //menggerakkan snail
     void move(int, int);
 };
 #endif

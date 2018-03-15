@@ -8,8 +8,9 @@ private:
     const int xPos;
     int yPos;
 public:
+    //konstruktor
     FishFood();
-    
+    //getter
     int getXPos() const;
     int getYPos() const;
 };

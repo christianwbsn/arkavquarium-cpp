@@ -3,8 +3,11 @@
 #define __AQUARIUM__HPP
 
 #include "LinkedList.hpp"
-
+#include "Fish.hpp"
+#include "Snail.hpp"
 class Aquarium{
+friend Fish;
+friend Snail;
 private:
     const int width,height; 
     LinkedList<Piranha> listOfPiranha;
