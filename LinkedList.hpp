@@ -14,16 +14,22 @@ struct node {
 
 template<class T>
 class LinkedList{
-public:
+private:
 	node<T>* first;
     node<T>* last;
-    int nbElmt;
-
+public:
     // Constructor LinkedList
     LinkedList<T>(){
         first = NULL;
         last = NULL;
     };
+
+    node<T> getFirst(){
+        return *first; 
+    }
+    node<T> getLast(){
+        return *last; 
+    }
     // Mengembalikan nilai True jika linked list kosong dan false jika sebaliknya
     bool isEmpty(){
         return first == NULL;
@@ -73,13 +79,19 @@ public:
     void remove(T& element){
         node<T>* prec = NULL;
         node<T>* curr = first;
+        node<T>* next;
         while(curr != NULL){
+            next = curr->next;
             if(curr->data == element){
-                prec->next = curr->next;
+                if(prec == NULL){
+                    first = next;
+                } else {
+                    prec->next = next;
+                }
             } else {
                 prec = curr;
             }
-            curr = curr->next;
+            curr = next;
         }
     }
     // Method ini mengembalikan elemen dengan tipe T pada indeks ke-i.
