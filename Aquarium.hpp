@@ -14,7 +14,10 @@ private:
     LinkedList<Guppy> listOfGuppy;
     LinkedList<Coin> listOfCoin;
     LinkedList<Food> listOfFood;
+    Snail snail;
 public:
+    
+    Aquarium();
     // Constructor akuarium yang menerima parameter input width dan height
     Aquarium(int,int);
     // Copy constructor akuarium

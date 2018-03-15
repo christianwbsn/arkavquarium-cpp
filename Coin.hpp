@@ -1,5 +1,8 @@
+//File : Coin.hpp
+
 #ifndef __COIN_HPP
 #define __COIN_HPP
+
 #include <iostream>
 using namespace std;
 
@@ -11,7 +14,6 @@ private:
 public:
     //konstruktor
     Coin(int,int,int);
-
     //getter
     int getXPos() const;
     int getYPos() const;

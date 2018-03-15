@@ -1,5 +1,6 @@
 #ifndef __SNAIL_HPP
 #define __SNAIL_HPP
+
 #include <iostream>
 using namespace std;
 
