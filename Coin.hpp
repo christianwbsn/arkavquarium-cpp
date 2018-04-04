@@ -8,15 +8,15 @@ using namespace std;
 
 class Coin{
 private:
-    int value;
-    const int xPos;
-    int yPos;
+    double value;
+    const double xPos;
+    double yPos;
 public:
     //konstruktor
-    Coin(int,int,int);
+    Coin(double,double,double);
     //getter
-    int getXPos() const;
-    int getYPos() const;
+    double getXPos() const;
+    double getYPos() const;
     
     //move
     void move();

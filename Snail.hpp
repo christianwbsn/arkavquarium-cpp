@@ -6,17 +6,17 @@ using namespace std;
 
 class Snail{
 private:
-    int xPos;
-    const int yPos;
+    double xPos;
+    const double yPos;
 public:
     //konstruktor
-    Snail();
+    Snail(int,int);
 
     //getter
-    int getXPos() const;
-    int getYPos() const;
+    double getXPos() const;
+    double getYPos() const;
     
     //menggerakkan snail
-    void move(int, int);
+    void move(double, double);
 };
 #endif
