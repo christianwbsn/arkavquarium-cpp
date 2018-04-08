@@ -1,8 +1,8 @@
-#include<math>
+#include <cmath>
+#include "Snail.hpp"
 //konstruktor
-Snail :: Snail(double _xpos, double _ypos){
+Snail :: Snail(double _xpos, double _ypos) : yPos(_ypos){
     xPos = _xpos;
-    yPos = _ypos;
 }
 
 //getter
@@ -14,8 +14,8 @@ double Snail :: getYPos() const{
 }
     
 //menggerakkan snail
-void move(double _y, double _x, double t){
+void Snail :: move(double _y, double _x, double t){
     double a = atan2(_x-xPos,_y-yPos);
-    x = x + cos(a)*t;
+    xPos = xPos + cos(a)*t;
 
 }

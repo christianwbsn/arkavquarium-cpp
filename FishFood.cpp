@@ -1,6 +1,7 @@
-FishFood :: FishFood(double _xpos,double _ypos){
-    value = _value;
-    xPos= _xpos;
+#include "FishFood.hpp"
+
+
+FishFood :: FishFood(double _xpos,double _ypos) : xPos(_xpos){
     yPos= _ypos;
 }
 
@@ -8,10 +9,10 @@ double FishFood :: getXPos() const{
     return xPos;
 }
 
-double Coin :: getYPos() const{
+double FishFood :: getYPos() const{
     return yPos;
 }
 
-void Coin :: move(){
+void FishFood :: move(){
     yPos--;
 }

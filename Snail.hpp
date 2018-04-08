@@ -10,13 +10,13 @@ private:
     const double yPos;
 public:
     //konstruktor
-    Snail(int,int);
+    Snail(double,double);
 
     //getter
     double getXPos() const;
     double getYPos() const;
     
     //menggerakkan snail
-    void move(double, double);
+    void move(double, double,double);
 };
 #endif

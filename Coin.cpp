@@ -1,6 +1,7 @@
-Coin :: Coin(double _value, double _xpos, double _ypos){
+#include "Coin.hpp"
+
+Coin :: Coin(double _value, double _xpos, double _ypos) : xPos(_xpos){
     value = _value;
-    xPos= _xpos;
     yPos= _ypos;
 }
 
