@@ -9,7 +9,7 @@ class Guppy : public Fish{
         int coinTime;
         int coinValue;
         int foodEaten;
-        const int baseCoinTime;
+        const int baseCoinTime = 3;
     public:
         Guppy();
 
