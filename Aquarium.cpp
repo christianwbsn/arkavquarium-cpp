@@ -1,7 +1,8 @@
 #include "Aquarium.hpp"
 
 Aquarium::Aquarium() {
-    
+    Snail S(50,50);
+    this->snail = S;
 }
 
 // Destruktor akuarium dan seluruh object di dalamnya
@@ -19,10 +20,13 @@ LinkedList<Coin> Aquarium::getListOfCoin() const {
     return this->listOfCoin;
 }
 
-LinkedList<Food> Aquarium::getListOfFood() const {
-    return this->listOfFood;
+LinkedList<FishFood> Aquarium::getListOfFishFood() const {
+    return this->listOfFishFood;
 }  
 
+Snail Aquarium::getSnail(){
+    return this->snail;
+}
 
 // getter object in position (x,y)
 Guppy Aquarium::getGuppy(double x, double y) const {
@@ -32,5 +36,5 @@ Guppy Aquarium::getGuppy(double x, double y) const {
 Coin Aquarium::getCoin(double x, double y) const {
 }
 
-Food Aquarium::getFood(double x, double y) const {
+FishFood Aquarium::getFishFood(double x, double y) const {
 }

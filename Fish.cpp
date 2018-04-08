@@ -14,7 +14,7 @@ Fish::Fish()
     this->direction = rand()%2 == 0? true:false;
     this->hungerTime = 100;
 }
-)
+
 void Fish::move(double dx, double dy){
     this->xPos += dx;
     this->yPos += dy;
