@@ -25,8 +25,8 @@ Piranha::Piranha() {
 Coin Piranha::extractCoin(int size) {
 	int val;
 	val = 100 * (size + 1);
-	Coin koin = Coin(val, this->getXPos(), this->getYPos());
-	return koin;
+	
+	return Coin(val, this->getXPos(), this->getYPos());
 }
 
 void Piranha::eatFood() {

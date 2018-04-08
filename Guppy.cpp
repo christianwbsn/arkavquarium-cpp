@@ -39,7 +39,5 @@ Coin Guppy::extractCoin() {
 		val = 100;
 	}
 	
-	Coin koin = Coin(val, this->getXPos(), this->getYPos());
-	
-	return koin;
+	return Coin(val, this->getXPos(), this->getYPos());;
 }
