@@ -5,7 +5,6 @@ Guppy :: Guppy():Fish() {
 	this->coinTime = 1;
 	this->coinValue = 0;
 	this->foodEaten = 0;
-	this->baseCoinTime;
 }
 
 int Guppy::getSize() const {
