@@ -25,11 +25,11 @@ public:
     //memakan makanan
     virtual void eatFood()=0;
     //Bergerak sesuai dengan status
-    void move(int, int);
+    void move(double, double);
 
     //Getter
-    int getXPos() const;
-    int getYPos() const;
+    double getXPos() const;
+    double getYPos() const;
     int getSize() const;
     int getFoodEaten() const;
     bool getDirection() const;
