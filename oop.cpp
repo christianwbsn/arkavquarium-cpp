@@ -5,7 +5,7 @@
 #include <map>
 #include <iostream>
 #include <chrono>
-
+#include <queue>
 using namespace std::chrono;
 
 high_resolution_clock::time_point start = high_resolution_clock::now();
@@ -123,6 +123,17 @@ void update_screen() {
 bool quit = false;
 std::set<SDL_Keycode> pressedKeys;
 std::set<SDL_Keycode> tappedKeys;
+int click_x = 0;
+int click_y = 0;
+bool click_change = false;
+
+// typedef struct{
+//   Uint8 type;
+//   Uint8 button;
+//   Uint8 state;
+//   Uint16 x, y;
+// } SDL_MouseButtonEvent;
+// https://www.libsdl.org/release/SDL-1.2.15/docs/html/sdlevent.html
 
 void handle_input() {
     SDL_Event e;
@@ -136,12 +147,31 @@ void handle_input() {
                 tappedKeys.insert(e.key.keysym.sym);
             } else if (e.type == SDL_KEYUP) {
                 pressedKeys.erase(e.key.keysym.sym);
+            } else if (e.type == SDL_MOUSEBUTTONDOWN) {
+                click_x = e.button.x;
+                click_y = e.button.y;
+                click_change = true;
             }
         }
 }
 
 bool quit_pressed() {
     return quit;
+}
+
+bool get_change_click(){
+    return click_change;
+}
+
+int get_click_x(){
+    return click_x;
+}
+
+int get_click_y(){
+    return click_y;
+}
+void reset_click_change(){
+    click_change = false;
 }
 
 const std::set<SDL_Keycode>& get_pressed_keys() {

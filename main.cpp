@@ -25,7 +25,12 @@ int main( int argc, char* args[] )
     Aquarium aq;
     cy = aq.getSnail().getYPos();
     cx = aq.getSnail().getXPos();
+
+    int click_x = 0;
+    int click_y = 0;
     while (running) {
+        clear_screen();
+        draw_image("Aquarium4.jpg", 320.0, 240.0);
         double now = time_since_start();
         double sec_since_last = now - prevtime;
         prevtime = now;
@@ -35,6 +40,12 @@ int main( int argc, char* args[] )
             running = false;
         }
 
+        if(get_change_click()){
+            reset_click_change();
+            click_x = get_click_x();
+            click_y = get_click_y();
+        }
+        
         // Gerakkan ikan selama tombol panah ditekan
         // Kecepatan dikalikan dengan perbedaan waktu supaya kecepatan ikan
         // konstan pada komputer yang berbeda.
@@ -76,16 +87,15 @@ int main( int argc, char* args[] )
             std::ostringstream strs;
             strs << "FPS: " ;
             strs << frames_passed/(now - fpc_start);
-            fps_text = strs.str();;
+            fps_text = strs.str();
             fpc_start = now;
             frames_passed = 0;
         }
 
         // Gambar ikan di posisi yang tepat.
-        clear_screen();
         draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
-        draw_image("Aquarium4.jpg", 320.0, 240.0);
+        draw_text("Click", 30, click_x, click_y, 0, 0, 0);
         draw_image("Guppsy.png", cx, cy);
         draw_image("Guppsy.png", 250.0, cy);
         update_screen();

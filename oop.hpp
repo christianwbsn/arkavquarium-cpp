@@ -52,6 +52,14 @@ void handle_input();
 // keluar di jendela program ketika handle_input() terakhir dipanggil.
 bool quit_pressed();
 
+bool get_change_click();
+
+int get_click_x();
+
+int get_click_y();
+
+void reset_click_change();
+
 // Untuk dua fungsi berikut, nama konstan kode yang tepat dapat dilihat di
 // https://wiki.libsdl.org/SDL_Keycode pada kolom "SDL_Keycode Value".
 
