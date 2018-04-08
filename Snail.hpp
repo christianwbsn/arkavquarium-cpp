@@ -10,8 +10,10 @@ private:
     const double yPos;
 public:
     //konstruktor
+    Snail();
     Snail(double,double);
-
+    Snail(const Snail&);
+    Snail operator=(const Snail& S);
     //getter
     double getXPos() const;
     double getYPos() const;

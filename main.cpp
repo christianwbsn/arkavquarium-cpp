@@ -2,7 +2,7 @@
 #include <iostream>
 #include <math.h>
 #include <sstream>
-
+#include "Aquarium.hpp"
 const double speed = 50; // pixels per second
 
 int main( int argc, char* args[] )
@@ -22,6 +22,9 @@ int main( int argc, char* args[] )
 
     double prevtime = time_since_start();
 
+    Aquarium aq;
+    cy = aq.getSnail().getYPos();
+    cx = aq.getSnail().getXPos();
     while (running) {
         double now = time_since_start();
         double sec_since_last = now - prevtime;
