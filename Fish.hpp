@@ -8,8 +8,8 @@ using namespace std;
 
 class Fish{
 private:
-    int xPos;
-    int yPos;
+    double xPos;
+    double yPos;
     int foodEaten;
     bool direction;
     int hungerTime;
