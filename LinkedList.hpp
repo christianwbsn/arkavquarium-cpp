@@ -13,7 +13,7 @@ struct node {
 };
 
 template<class T>
-class LinkedList{
+class LinkedList {
 private:
 	node<T>* first;
     node<T>* last;
@@ -33,6 +33,16 @@ public:
     // Mengembalikan nilai True jika linked list kosong dan false jika sebaliknya
     bool isEmpty(){
         return first == NULL;
+    }
+
+    int getSize() const {
+        node<T>* curr = first;
+        int count = 0;
+        while(curr != NULL) {
+            curr = curr->next;
+            count++;
+        }
+        return count;
     }
     // Method ini mengembalikan indeks dimana elemen berada pada linked list dan -1 jika tidak ada
     int find(T element){

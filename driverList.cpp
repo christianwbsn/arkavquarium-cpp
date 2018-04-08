@@ -18,6 +18,7 @@ int main(){
     cout << L1.isEmpty() << endl;
     cout << "Posisi angka 3: " << L1.find(3) << endl;
     cout << "Isi index ke 3: " << L1.get(3) << endl;
+    cout << "Ukurannya: " << L1.getSize() << endl;
     L1.printList();
     return 0;
 }
