@@ -1,6 +1,8 @@
 #ifndef __FISH_HPP
 #define __FISH_HPP
+
 #include <iostream>
+
 #include "Coin.hpp"
 using namespace std;
 
@@ -20,9 +22,9 @@ public:
     //constructor
     Fish();
     //mengeluarkan koin setiap C waktu
-    virtual Coin extractCoin();
+    virtual Coin extractCoin()=0;
     //memakan makanan
-    virtual void eatFood();
+    virtual void eatFood()=0;
     //Bergerak sesuai dengan status
     void move(int, int);
 
