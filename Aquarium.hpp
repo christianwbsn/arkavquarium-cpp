@@ -5,11 +5,11 @@
 #include "LinkedList.hpp"
 #include "Fish.hpp"
 #include "Snail.hpp"
-class Aquarium{
+
+class Aquarium {
 friend Fish;
 friend Snail;
 private:
-    const int width,height; 
     LinkedList<Piranha> listOfPiranha;
     LinkedList<Guppy> listOfGuppy;
     LinkedList<Coin> listOfCoin;
@@ -19,20 +19,19 @@ public:
     
     Aquarium();
     // Constructor akuarium yang menerima parameter input width dan height
-    Aquarium(int,int);
-    // Copy constructor akuarium
-    Aquarium(const Akuarium&);
-    // Destruktor akuarium dan seluruh object di dalamnya
     ~Aquarium();
 
     // getter ukuran dari akuarium
-    int getWidth() const;
-    int getHeight() const;
+    LinkedList<Piranha> getListOfPiranha() const;
+    LinkedList<Guppy> getListOfGuppy() const;
+    LinkedList<Coin> getListOfCoin() const;
+    LinkedList<Food> getListOfFood() const;  
+
 
     // getter object in position (x,y)
-    Guppy getGuppy(int, int) const;
-    Coin getCoin(int, int) const;
-    Food getFood(int, int) const;
+    Guppy getGuppy(double, double) const;
+    Coin getCoin(double, double) const;
+    Food getFood(double, double) const;
 };
 
 #endif
