@@ -14,9 +14,8 @@ private:
     bool direction;
     int hungerTime;
 
-    const int foodNeeded;
-    const int fullTimeLimit;
-    const int speed;
+    const int fullTimeLimit = 60;
+    const int speed = 3;
 
 public:
     //constructor
