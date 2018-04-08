@@ -19,12 +19,12 @@
 
 #include "Piranha.hpp"
 
-Piranha::Piranha() {
+Piranha::Piranha():Fish(){
 }
 
-Coin Piranha::extractCoin(int size) {
+Coin Piranha::extractCoin() {
 	int val;
-	val = 100 * (size + 1);
+	val = 100 * (10000 + 1);
 	
 	return Coin(val, this->getXPos(), this->getYPos());
 }

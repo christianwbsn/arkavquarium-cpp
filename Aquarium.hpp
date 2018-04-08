@@ -26,7 +26,7 @@ public:
     ~Aquarium();
 
     // getter ukuran dari akuarium
-    LinkedList<Piranha> getListOfPiranha() const;
+    // LinkedList<Piranha> getListOfPiranha() const;
     LinkedList<Guppy> getListOfGuppy() const;
     LinkedList<Coin> getListOfCoin() const;
     LinkedList<FishFood> getListOfFishFood() const;  

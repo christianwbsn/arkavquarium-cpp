@@ -1,8 +1,11 @@
 #include "Aquarium.hpp"
+#include <iostream>
 
 Aquarium::Aquarium() {
-    Snail S(50,50);
+    Snail S(590.0);
+    std::cout<<S.getXPos()<<std::endl;
     this->snail = S;
+    std::cout<<this->snail.getXPos()<<std::endl;
 }
 
 // Destruktor akuarium dan seluruh object di dalamnya
@@ -10,9 +13,9 @@ Aquarium::~Aquarium() {
 }
 
 // getter ukuran dari akuarium
-LinkedList<Piranha> Aquarium::getListOfPiranha() const {
-    return this->listOfPiranha;
-}
+// LinkedList<Piranha> Aquarium::getListOfPiranha() const {
+//     return this->listOfPiranha;
+// }
 LinkedList<Guppy> Aquarium::getListOfGuppy() const {
     return this->listOfGuppy;
 }

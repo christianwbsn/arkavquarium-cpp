@@ -1,18 +1,17 @@
 #include <cmath>
 #include "Snail.hpp"
 //konstruktor
-Snail :: Snail() : yPos(0.0){
+Snail :: Snail(){
     xPos = 0.0;
 }
-Snail :: Snail(double _xpos, double _ypos) : yPos(_ypos){
+Snail :: Snail(double _xpos){
     xPos = _xpos;
 }
 
 Snail Snail :: operator=(const Snail& S) {
-    int _x = S.getXPos();
-    int _y = S.getYPos();
-    Snail temp(_x, _y);
-    return temp;
+    double _x = S.getXPos();
+    this->xPos = _x;
+    return *this;
 }
 //getter
 double Snail :: getXPos() const{

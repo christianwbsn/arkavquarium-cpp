@@ -7,12 +7,11 @@ using namespace std;
 class Snail{
 private:
     double xPos;
-    const double yPos;
+    const double yPos = 460.0;
 public:
     //konstruktor
     Snail();
-    Snail(double,double);
-    Snail(const Snail&);
+    Snail(double);
     Snail operator=(const Snail& S);
     //getter
     double getXPos() const;

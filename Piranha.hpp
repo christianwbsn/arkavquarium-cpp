@@ -10,7 +10,7 @@ class Piranha : public Fish{
         Piranha();
         
         //mengeluarkan coin
-        Coin extractCoin(int);
+        Coin extractCoin();
         //memakan makanan
         void eatFood();
 };
