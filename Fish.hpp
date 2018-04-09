@@ -10,17 +10,18 @@ class Fish{
 private:
     double xPos;
     double yPos;
+    double xDest;
+    double yDest;
+    double moveTime;
     int foodEaten;
     bool direction;
     int hungerTime;
-
     const int fullTimeLimit = 60;
     const int speed = 3;
 
 public:
     //constructor
     Fish();
-    
     Fish& operator=(const Fish& F);
     //mengeluarkan koin setiap C waktu
     virtual Coin extractCoin()=0;

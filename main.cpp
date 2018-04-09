@@ -107,7 +107,14 @@ int main( int argc, char* args[] )
             draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
-            draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+            // cout << tank.listOfGuppy.get(i).getDirection() << endl;
+            if(tank.listOfGuppy.get(i).getDirection()){
+                draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                cout << "kanan" << endl;
+            }else{
+                draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                cout << "kiri" << endl;
+            }
         }
         draw_image("Guppsy.png", cx, cy);
         draw_image("Guppsy.png", 250.0, cy);
@@ -126,14 +133,14 @@ int main( int argc, char* args[] )
                 // double tanday = rand()%2;
                 // tanday = tanday==0?-1.0:1.0;
                 double xx = (double)(rand() % SCREEN_WIDTH + 1);
-                cout << xx << ":";
+                // cout << xx << ":";
                 double yy = (double)(rand() % SCREEN_HEIGHT + 1);
-                cout << yy << endl;
-                cout << "masuk" << endl;
+                // cout << yy << endl;
+                // cout << "masuk" << endl;
             
 
             // double t = (rand()%45 + 5)*0.1;
-            tank.listOfGuppy.get(i).move(50.0,450.0,sec_since_last);       
+            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last);       
         }
     }
 
