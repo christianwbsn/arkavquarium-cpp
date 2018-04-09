@@ -31,7 +31,7 @@ int main( int argc, char* args[] )
     double sebelum = 0;
     while (running) {
         clear_screen();
-        draw_image("Aquarium4.jpg", 320.0, 240.0);
+        draw_image("images/Aquarium4.jpg", 320.0, 240.0);
         double now = time_since_start();
         double sec_since_last = now - prevtime;
         prevtime = now;
@@ -107,6 +107,7 @@ int main( int argc, char* args[] )
             draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
+<<<<<<< HEAD
             // cout << tank.listOfGuppy.get(i).getDirection() << endl;
             if(tank.listOfGuppy.get(i).getDirection()){
                 draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
@@ -115,9 +116,12 @@ int main( int argc, char* args[] )
                 draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
                 cout << "kiri" << endl;
             }
+=======
+            draw_image("images/Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+>>>>>>> 08478c01b506bdb89a2485ca2916905149dc0f63
         }
-        draw_image("Guppsy.png", cx, cy);
-        draw_image("Guppsy.png", 250.0, cy);
+        draw_image("images/Guppsy.png", cx, cy);
+        draw_image("images/Guppsy.png", 250.0, cy);
         update_screen();
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
             // cout<<tank.listOfFishFood.get(i).getYPos()<<endl;
