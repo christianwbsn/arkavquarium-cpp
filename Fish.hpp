@@ -20,12 +20,14 @@ private:
 public:
     //constructor
     Fish();
+    
+    Fish& operator=(const Fish& F);
     //mengeluarkan koin setiap C waktu
     virtual Coin extractCoin()=0;
     //memakan makanan
     virtual void eatFood()=0;
     //Bergerak sesuai dengan status
-    void move(double, double);
+    void move(double, double, double);
 
     //Getter
     double getXPos() const;

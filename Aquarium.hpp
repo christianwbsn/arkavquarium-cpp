@@ -13,7 +13,7 @@ class Aquarium {
 friend Fish;
 friend Snail;
 
-private:
+public:
     LinkedList<Piranha> listOfPiranha;
     LinkedList<Guppy> listOfGuppy;
     LinkedList<Coin> listOfCoin;

@@ -10,6 +10,14 @@ Guppy :: Guppy():Fish() {
 int Guppy::getSize() const {
 	return this->size;
 }
+Guppy Guppy :: operator=(const Guppy& G){
+	this->size = G.size;
+	this->coinTime = G.coinTime;
+	this->coinValue = G.coinValue;
+	this->foodEaten = G.foodEaten;
+	Fish::operator=(G);
+	return *this;
+}
 
 void Guppy::eatFood() {
 	this->foodEaten++;

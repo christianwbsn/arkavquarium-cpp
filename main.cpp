@@ -8,7 +8,7 @@ const double speed = 50; // pixels per second
 int main( int argc, char* args[] )
 {
     init();
-
+    Aquarium tank;
     // Menghitung FPS
     int frames_passed = 0;
     double fpc_start = time_since_start();
@@ -26,8 +26,9 @@ int main( int argc, char* args[] )
     cy = aq.getSnail().getYPos();
     cx = aq.getSnail().getXPos();
 
-    int click_x = 0;
-    int click_y = 0;
+    double click_x = 0;
+    double click_y = 0;
+    double sebelum = 0;
     while (running) {
         clear_screen();
         draw_image("Aquarium4.jpg", 320.0, 240.0);
@@ -44,6 +45,8 @@ int main( int argc, char* args[] )
             reset_click_change();
             click_x = get_click_x();
             click_y = get_click_y();
+            FishFood food(click_x,click_y);
+            tank.listOfFishFood.add(food);
         }
         
         // Gerakkan ikan selama tombol panah ditekan
@@ -65,7 +68,7 @@ int main( int argc, char* args[] )
                 break;
             }
         }
-
+        double mult;
         // Proses masukan yang bersifat "tombol"
         for (auto key : get_tapped_keys()) {
             switch (key) {
@@ -78,6 +81,11 @@ int main( int argc, char* args[] )
             case SDLK_x:
                 running = false;
                 break;
+            
+            case SDLK_f:
+                Guppy ikan;
+                tank.listOfGuppy.add(ikan);
+                mult = 3;
             }
         }
 
@@ -95,10 +103,38 @@ int main( int argc, char* args[] )
         // Gambar ikan di posisi yang tepat.
         draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
-        draw_text("Click", 30, click_x, click_y, 0, 0, 0);
+        for(int i=0;i<tank.listOfFishFood.getSize();i++){
+            draw_text("FISHFOOD",15,tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos(),0,0,0);
+        }
+        for(int i=0;i<tank.listOfGuppy.getSize();i++){
+            draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+        }
         draw_image("Guppsy.png", cx, cy);
         draw_image("Guppsy.png", 250.0, cy);
         update_screen();
+        for(int i=0;i<tank.listOfFishFood.getSize();i++){
+            // cout<<tank.listOfFishFood.get(i).getYPos()<<endl;
+            tank.listOfFishFood.get(i).move();
+        }
+        double xx;
+        double yy;
+        double sebelum = time_since_start();
+        for(int i=0;i<tank.listOfGuppy.getSize();i++){
+            cout << time_since_start()<< endl;
+            if (time_since_start()>mult){
+                mult = 2*mult;
+                double tandax = rand()%2;
+                tandax = tandax==0?-1.0:1.0;
+                double tanday = rand()%2;
+                tanday = tanday==0?-1.0:1.0;
+                double xx = (double)(rand() % SCREEN_WIDTH + 1)*tandax;
+                double yy = (double)(rand() % SCREEN_HEIGHT + 1)*tanday;
+                cout << "masuk" << endl;
+            }
+
+
+            tank.listOfGuppy.get(i).move(xx,yy,sec_since_last);
+        }
     }
 
     close();

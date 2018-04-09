@@ -5,14 +5,16 @@ using namespace std;
 
 class FishFood{
 private:
-    const double xPos;
+    double xPos;
     double yPos;
 public:
     //konstruktor
+    FishFood();
     FishFood(double,double);
     //getter
     double getXPos() const;
     double getYPos() const;
     void move();
+    FishFood operator=(const FishFood& F);
 };
 #endif

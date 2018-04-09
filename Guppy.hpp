@@ -12,7 +12,7 @@ class Guppy : public Fish{
         const int baseCoinTime = 3;
     public:
         Guppy();
-
+        Guppy operator=(const Guppy& G);
         int getSize() const;
         
         void eatFood();
