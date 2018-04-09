@@ -26,8 +26,9 @@ Fish& Fish :: operator=(const Fish& F){
 }
 void Fish::move(double x, double y, double t){
     double a = atan2(x-xPos,y-yPos);
-    xPos = xPos + cos(a)*t;
-    yPos = yPos + cos(a)*t;
+    cout << x << ":" << y << ":" << a << endl;
+    this->xPos += 15*sin(a)*t;
+    this->yPos += 15*cos(a)*t;
 }
 
 double Fish::getXPos() const{

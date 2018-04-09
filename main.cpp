@@ -85,7 +85,6 @@ int main( int argc, char* args[] )
             case SDLK_f:
                 Guppy ikan;
                 tank.listOfGuppy.add(ikan);
-                mult = 3;
             }
         }
 
@@ -103,8 +102,9 @@ int main( int argc, char* args[] )
         // Gambar ikan di posisi yang tepat.
         draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
+        draw_text("tujuan", 18, 50, 450, 0, 0, 0);
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
-            draw_text("FISHFOOD",15,tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos(),0,0,0);
+            draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
             draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
@@ -120,20 +120,20 @@ int main( int argc, char* args[] )
         double yy;
         double sebelum = time_since_start();
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
-            cout << time_since_start()<< endl;
-            if (time_since_start()>mult){
-                mult = 2*mult;
-                double tandax = rand()%2;
-                tandax = tandax==0?-1.0:1.0;
-                double tanday = rand()%2;
-                tanday = tanday==0?-1.0:1.0;
-                double xx = (double)(rand() % SCREEN_WIDTH + 1)*tandax;
-                double yy = (double)(rand() % SCREEN_HEIGHT + 1)*tanday;
+            // cout << time_since_start()<< endl;
+                // double tandax = rand()%2;
+                // tandax = tandax==0?-1.0:1.0;
+                // double tanday = rand()%2;
+                // tanday = tanday==0?-1.0:1.0;
+                double xx = (double)(rand() % SCREEN_WIDTH + 1);
+                cout << xx << ":";
+                double yy = (double)(rand() % SCREEN_HEIGHT + 1);
+                cout << yy << endl;
                 cout << "masuk" << endl;
-            }
+            
 
-
-            tank.listOfGuppy.get(i).move(xx,yy,sec_since_last);
+            // double t = (rand()%45 + 5)*0.1;
+            tank.listOfGuppy.get(i).move(50.0,450.0,sec_since_last);       
         }
     }
 
