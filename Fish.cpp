@@ -16,7 +16,7 @@ Fish::Fish()
     this->moveTime = 0;
     this->foodEaten = 0;
     this->direction = true;
-    this->hungerTime = 100;
+    this->hungerTime = 50;
 }
 
 Fish& Fish :: operator=(const Fish& F){
@@ -27,11 +27,21 @@ Fish& Fish :: operator=(const Fish& F){
     this->moveTime = 0;
     this->foodEaten = 0;
     this->direction = true;
-    this->hungerTime = 100;
+    this->hungerTime = 50;
     return *this;
 }
-void Fish::move(double x, double y, double t){
-    if(this->moveTime <= 0){
+void Fish::move(double x, double y, double t, bool huntFood){
+    if(huntFood){
+        this->moveTime = (rand()%45 + 5)*0.1;
+        this->xDest = x;
+        this->yDest = y;
+        if(this->xPos - this->xDest > 0){
+            this->direction = true;
+        }else{
+            this->direction = false;
+        }
+    }else if(this->moveTime <= 0){
+        this->hungerTime -= 2;
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = x;
         this->yDest = y;
@@ -44,8 +54,8 @@ void Fish::move(double x, double y, double t){
         this->moveTime -= t;
     }
     double a = atan2(this->xDest-xPos,this->yDest-yPos);
-    this->xPos += 15*sin(a)*t;
-    this->yPos += 15*cos(a)*t;
+    this->xPos += this->speed*sin(a)*t;
+    this->yPos += this->speed*cos(a)*t;
     this->moveTime -= t;
     // cout << x << ":" << y << ":" << a << endl;
 }
@@ -66,4 +76,8 @@ int Fish::getHungerTime() const{
 
 int Fish::getSpeed() const{
     return this->speed;
+}
+
+bool Fish::isHungry() const{
+    return this->hungerTime < this->fullTimeLimit;
 }

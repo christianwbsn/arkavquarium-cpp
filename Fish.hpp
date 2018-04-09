@@ -7,7 +7,7 @@
 using namespace std;
 
 class Fish{
-private:
+protected:
     double xPos;
     double yPos;
     double xDest;
@@ -17,7 +17,7 @@ private:
     bool direction;
     int hungerTime;
     const int fullTimeLimit = 60;
-    const int speed = 3;
+    const int speed = 40;
 
 public:
     //constructor
@@ -28,7 +28,7 @@ public:
     //memakan makanan
     virtual void eatFood()=0;
     //Bergerak sesuai dengan status
-    void move(double, double, double);
+    void move(double, double, double, bool);
 
     //Getter
     double getXPos() const;
@@ -41,6 +41,6 @@ public:
     int getFullTimeLimit() const;
     int getSpeed() const;
 
-    bool isHungry();
+    bool isHungry() const;
 };
 #endif

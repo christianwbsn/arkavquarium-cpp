@@ -5,6 +5,10 @@
 #include "Aquarium.hpp"
 const double speed = 50; // pixels per second
 
+double calculateDistance(double x1, double y1, double x2, double y2){
+    return sqrt(pow(x2-x1,2) + pow(y2-y1,2));
+}
+
 int main( int argc, char* args[] )
 {
     init();
@@ -110,38 +114,49 @@ int main( int argc, char* args[] )
             // cout << tank.listOfGuppy.get(i).getDirection() << endl;
             if(tank.listOfGuppy.get(i).getDirection()){
                 draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
-                cout << "kanan" << endl;
             }else{
                 draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
-                cout << "kiri" << endl;
             }
         }
-        draw_image("images/Guppsy.png", cx, cy);
-        draw_image("images/Guppsy.png", 250.0, cy);
-        update_screen();
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
-            // cout<<tank.listOfFishFood.get(i).getYPos()<<endl;
-            tank.listOfFishFood.get(i).move();
+            if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
+                tank.listOfFishFood.remove(tank.listOfFishFood.get(i));
+            }else{
+                tank.listOfFishFood.get(i).move();
+            }
         }
-        double xx;
-        double yy;
-        double sebelum = time_since_start();
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
-            // cout << time_since_start()<< endl;
-                // double tandax = rand()%2;
-                // tandax = tandax==0?-1.0:1.0;
-                // double tanday = rand()%2;
-                // tanday = tanday==0?-1.0:1.0;
-                double xx = (double)(rand() % SCREEN_WIDTH + 1);
-                // cout << xx << ":";
-                double yy = (double)(rand() % SCREEN_HEIGHT + 1);
-                // cout << yy << endl;
-                // cout << "masuk" << endl;
-            
-
-            // double t = (rand()%45 + 5)*0.1;
-            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last);       
+            double xx;
+            double yy;
+            bool huntFood = false;
+            // cout << tank.listOfGuppy.get(i).getHungerTime() << endl;
+            if(tank.listOfGuppy.get(i).isHungry() && !tank.listOfFishFood.isEmpty()){
+                huntFood = true;
+                // cout << "lapar coy" << endl;
+                double currX = tank.listOfGuppy.get(i).getXPos();
+                double currY = tank.listOfGuppy.get(i).getYPos();
+                double minDistance = __LDBL_MAX__;
+                for(int j=0;j<tank.listOfFishFood.getSize();j++){
+                    double tempX = tank.listOfFishFood.get(j).getXPos();
+                    double tempY = tank.listOfFishFood.get(j).getYPos();
+                    double tempDist = calculateDistance(tempX, tempY, currX, currY);
+                    if(tempDist < minDistance){
+                        minDistance = tempDist;
+                        xx = tempX;
+                        yy = tempY;
+                    }
+                    if(tempDist < 15){
+                        tank.listOfFishFood.remove(tank.listOfFishFood.get(j));
+                        tank.listOfGuppy.get(i).eatFood();
+                    }
+                }
+            }else{
+                xx = (double)(rand() % SCREEN_WIDTH + 1);
+                yy = (double)(rand() % SCREEN_HEIGHT + 1);
+            }
+            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last, huntFood);       
         }
+        update_screen();
     }
 
     close();

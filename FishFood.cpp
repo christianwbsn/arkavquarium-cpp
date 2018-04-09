@@ -19,7 +19,7 @@ double FishFood :: getYPos() const{
 }
 
 void FishFood :: move(){
-    this->yPos += 0.25;
+    this->yPos += 0.17;
 }
 
 FishFood FishFood :: operator=(const FishFood& F){

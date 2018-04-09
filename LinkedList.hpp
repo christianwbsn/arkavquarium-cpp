@@ -92,7 +92,7 @@ public:
         node<T>* next;
         while(curr != NULL){
             next = curr->next;
-            if(curr->data == element){
+            if(&curr->data == &element){
                 if(prec == NULL){
                     first = next;
                 } else {

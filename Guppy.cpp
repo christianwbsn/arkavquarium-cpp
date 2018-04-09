@@ -21,6 +21,7 @@ Guppy Guppy :: operator=(const Guppy& G){
 
 void Guppy::eatFood() {
 	this->foodEaten++;
+	this->hungerTime+=40;
 	if ((this->foodEaten == 3) or (this->foodEaten == 10)) {
 		grow();
 	}
