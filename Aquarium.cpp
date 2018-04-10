@@ -6,7 +6,11 @@ Aquarium::Aquarium() {
     std::cout<<S.getXPos()<<std::endl;
     this->snail = S;
     std::cout<<this->snail.getXPos()<<std::endl;
-    this->money = 100;
+    this->money = 50;
+    Guppy ikan1;
+    this->listOfGuppy.add(ikan1);
+    Guppy ikan2;
+    this->listOfGuppy.add(ikan2);
 }
 
 // Destruktor akuarium dan seluruh object di dalamnya

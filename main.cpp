@@ -46,6 +46,10 @@ int main( int argc, char* args[] )
             running = false;
         }
 
+        if(tank.listOfCoin.getSize() == 0 && tank.listOfGuppy.getSize() == 0 && tank.listOfPiranha.getSize() == 0 && tank.getMoney() == 0){
+            draw_text("YOU LOSE", 50, 320, 240, 255, 0, 0);
+        }
+
         if(get_change_click()){
             reset_click_change();
             click_x = get_click_x();
@@ -151,7 +155,9 @@ int main( int argc, char* args[] )
             double yy;
             bool huntFood = false;
             // cout << tank.listOfGuppy.get(i).getHungerTime() << endl;
-            if(tank.listOfPiranha.get(i).isHungry() && !tank.listOfGuppy.isEmpty()){
+            if(tank.listOfPiranha.get(i).getHungerTime() < 20){
+                tank.listOfPiranha.remove(tank.listOfPiranha.get(i));
+            }else if(tank.listOfPiranha.get(i).isHungry() && !tank.listOfGuppy.isEmpty()){
                 huntFood = true;
                 cout << "Piranha Lapar" << endl;
                 double currX = tank.listOfPiranha.get(i).getXPos();
@@ -184,37 +190,41 @@ int main( int argc, char* args[] )
             double xx;
             double yy;
             bool huntFood = false;
-            // cout << tank.listOfGuppy.get(i).getHungerTime() << endl;
-            if(tank.listOfGuppy.get(i).isHungry() && !tank.listOfFishFood.isEmpty()){
-                huntFood = true;
-                cout << "lapar coy" << endl;
-                double currX = tank.listOfGuppy.get(i).getXPos();
-                double currY = tank.listOfGuppy.get(i).getYPos();
-                double minDistance = __LDBL_MAX__;
-                for(int j=0;j<tank.listOfFishFood.getSize();j++){
-                    double tempX = tank.listOfFishFood.get(j).getXPos();
-                    double tempY = tank.listOfFishFood.get(j).getYPos();
-                    double tempDist = calculateDistance(tempX, tempY, currX, currY);
-                    if(tempDist < minDistance){
-                        minDistance = tempDist;
-                        xx = tempX;
-                        yy = tempY;
-                    }
-                    if(tempDist < 15){
-                        tank.listOfFishFood.remove(tank.listOfFishFood.get(j));
-                        tank.listOfGuppy.get(i).eatFood();
-                    }
-                }
+            
+            if(tank.listOfGuppy.get(i).getHungerTime() < 20){
+                tank.listOfGuppy.remove(tank.listOfGuppy.get(i));
             }else{
-                xx = (double)(rand() % SCREEN_WIDTH + 1);
-                yy = (double)(rand() % SCREEN_HEIGHT + 1);
+                if(tank.listOfGuppy.get(i).isHungry() && !tank.listOfFishFood.isEmpty()){
+                    huntFood = true;
+                    cout << "lapar coy" << endl;
+                    double currX = tank.listOfGuppy.get(i).getXPos();
+                    double currY = tank.listOfGuppy.get(i).getYPos();
+                    double minDistance = __LDBL_MAX__;
+                    for(int j=0;j<tank.listOfFishFood.getSize();j++){
+                        double tempX = tank.listOfFishFood.get(j).getXPos();
+                        double tempY = tank.listOfFishFood.get(j).getYPos();
+                        double tempDist = calculateDistance(tempX, tempY, currX, currY);
+                        if(tempDist < minDistance){
+                            minDistance = tempDist;
+                            xx = tempX;
+                            yy = tempY;
+                        }
+                        if(tempDist < 15){
+                            tank.listOfFishFood.remove(tank.listOfFishFood.get(j));
+                            tank.listOfGuppy.get(i).eatFood();
+                        }
+                    }
+                }else{
+                    xx = (double)(rand() % SCREEN_WIDTH + 1);
+                    yy = (double)(rand() % SCREEN_HEIGHT + 1);
+                }
+                if(tank.listOfGuppy.get(i).getSize() >= 2 && tank.listOfGuppy.get(i).getCoinTime()<=0){
+                    tank.listOfCoin.add(tank.listOfGuppy.get(i).extractCoin());
+                    cout << "masuk sini" << endl;
+                }
+                tank.listOfGuppy.get(i).move(xx, yy, sec_since_last, huntFood);
+                tank.listOfGuppy.get(i).setCoinTime(sec_since_last);
             }
-            if(tank.listOfGuppy.get(i).getSize() >= 2 && tank.listOfGuppy.get(i).getCoinTime()<=0){
-                tank.listOfCoin.add(tank.listOfGuppy.get(i).extractCoin());
-                cout << "masuk sini" << endl;
-            }
-            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last, huntFood);
-            tank.listOfGuppy.get(i).setCoinTime(sec_since_last);       
         }
 
         // Gambar ikan di posisi yang tepat.
