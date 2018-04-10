@@ -1,25 +1,11 @@
-//~ #ifndef __PIRANHA_HPP
-//~ #define __PIRANHA_HPP
-//~ #include "Fish.hpp"
-//~ #include "Guppy.hpp"
-//~ using namespace std;
-
-//~ class Piranha : public Fish{
-    //~ public:
-        //~ //konstruktor
-        //~ Piranha();
-        
-        //~ //mengeluarkan coin
-        //~ Coin extractCoin(int);
-        //~ //memakan makanan
-        //~ void eatFood();
-//~ };
-//~ #endif
-
-
 #include "Piranha.hpp"
 
 Piranha::Piranha():Fish(){
+}
+
+Piranha Piranha::operator=(const Piranha& P){
+	Fish::operator=(P);
+	return *this;
 }
 
 Coin Piranha::extractCoin() {
@@ -30,5 +16,5 @@ Coin Piranha::extractCoin() {
 }
 
 void Piranha::eatFood() {
-	//nanti
+	this->hungerTime+=40;
 }
