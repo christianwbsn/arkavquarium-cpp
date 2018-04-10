@@ -17,6 +17,7 @@ int main( int argc, char* args[] )
     int frames_passed = 0;
     double fpc_start = time_since_start();
     std::string fps_text = "FPS: 0";
+    std::string money_text = "Money: Undefined";
 
     // Posisi ikan
     double cy = SCREEN_HEIGHT / 2;
@@ -55,14 +56,18 @@ int main( int argc, char* args[] )
                 double coinY = tank.listOfCoin.get(i).getYPos();
                 double tempDist = calculateDistance(coinX, coinY, click_x, click_y);
                 if(tempDist < 15){
+                    tank.increaseMoney(tank.listOfCoin.get(i).getValue());
                     tank.listOfCoin.remove(tank.listOfCoin.get(i));
                     isCoin = true;
                     break;
                 }
             }
             if(!isCoin){
-                FishFood food(click_x,click_y);
-                tank.listOfFishFood.add(food);
+                if(tank.getMoney() >= 10){
+                    tank.decreaseMoney(10);
+                    FishFood food(click_x,click_y);
+                    tank.listOfFishFood.add(food);
+                }
             }
         }
         
@@ -102,14 +107,20 @@ int main( int argc, char* args[] )
             }
             
             case SDLK_f:{
-                Guppy ikan;
-                tank.listOfGuppy.add(ikan);
+                if(tank.getMoney() >= 50){
+                    tank.decreaseMoney(50);
+                    Guppy ikan;
+                    tank.listOfGuppy.add(ikan);
+                }
                 break;
             }
 
             case SDLK_p:{
-                Piranha pir;
-                tank.listOfPiranha.add(pir);
+                if(tank.getMoney() >= 100){
+                    tank.decreaseMoney(100);
+                    Piranha pir;
+                    tank.listOfPiranha.add(pir);
+                }
                 break;
             }
             }
@@ -125,6 +136,14 @@ int main( int argc, char* args[] )
             fpc_start = now;
             frames_passed = 0;
         }
+        draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
+        draw_text(fps_text, 18, 10, 30, 0, 0, 0);
+        std::ostringstream strs;
+        strs << "Money: ";
+        strs << tank.getMoney();
+        money_text = strs.str();
+        draw_text(money_text, 18, 10, 50, 0, 0, 0);
+
 
         for(int i=0;i<tank.listOfPiranha.getSize();i++){
             cout << "flag 1" << endl;
@@ -199,28 +218,85 @@ int main( int argc, char* args[] )
         }
 
         // Gambar ikan di posisi yang tepat.
-        draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
-        draw_text(fps_text, 18, 10, 30, 0, 0, 0);
         for(int i=0;i<tank.listOfPiranha.getSize();i++){
-            if(tank.listOfPiranha.get(i).getDirection()){
-                draw_image("images/Piranha_left_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
-            }else{
-                draw_image("images/Piranha_right_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+            if(tank.listOfPiranha.get(i).isHungry()){
+                if(tank.listOfPiranha.get(i).getDirection()){
+                    draw_image("images/Piranha_Hungry_left_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+                }else{
+                    draw_image("images/Piranha_Hungry_right_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+                }    
+            }
+            else{
+                if(tank.listOfPiranha.get(i).getDirection()){
+                    draw_image("images/Piranha_left_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+                }else{
+                    draw_image("images/Piranha_right_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+                }
             }
         }
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
             draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }
         for(int i=0;i<tank.listOfCoin.getSize();i++){
-            draw_image("images/Coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
+            if(tank.listOfCoin.get(i).getValue()==50){
+                draw_image("images/Silver_coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
+            }
+            else if(tank.listOfCoin.get(i).getValue()==100){
+                draw_image("images/Gold_coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
+            }
+            else{
+                draw_image("images/Diamond_coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
+            }
         }
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
             // cout << tank.listOfGuppy.get(i).getDirection() << endl;
-            if(tank.listOfGuppy.get(i).getDirection()){
-                draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
-            }else{
-                draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+            if(tank.listOfGuppy.get(i).isHungry()){
+                if(tank.listOfGuppy.get(i).getSize()==1){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Small_Hungry_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Small_Hungry_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }
+                else if(tank.listOfGuppy.get(i).getSize()==2){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Medium_Hungry_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Hungry_Medium_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }
+                else if(tank.listOfGuppy.get(i).getSize()==3){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Hungry_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Hungry_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }
             }
+            else{
+                if(tank.listOfGuppy.get(i).getSize()==1){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Small_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Small_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }
+                else if(tank.listOfGuppy.get(i).getSize()==2){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Medium_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Medium_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }
+                else if(tank.listOfGuppy.get(i).getSize()==3){
+                    if(tank.listOfGuppy.get(i).getDirection()){
+                        draw_image("images/Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }else{
+                        draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                    }
+                }   
+            }
+            
         }
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
             if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
@@ -254,6 +330,7 @@ int main( int argc, char* args[] )
                         yy = tempY;
                     }
                     if(tempDist < 15){
+                        tank.increaseMoney(tank.listOfCoin.get(j).getValue());
                         tank.listOfCoin.remove(tank.listOfCoin.get(j));
                         
                     }

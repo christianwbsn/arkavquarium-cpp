@@ -19,6 +19,7 @@ public:
     LinkedList<Coin> listOfCoin;
     LinkedList<FishFood> listOfFishFood;
     Snail snail;
+    int money;
 public:
     
     Aquarium();
@@ -38,6 +39,9 @@ public:
     Guppy getGuppy(double, double) const;
     Coin getCoin(double, double) const;
     FishFood getFishFood(double, double) const;
+    int getMoney();
+    void increaseMoney(int);
+    void decreaseMoney(int);
 };
 
 #endif
