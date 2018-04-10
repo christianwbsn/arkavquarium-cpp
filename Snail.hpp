@@ -7,7 +7,10 @@ using namespace std;
 class Snail{
 private:
     double xPos;
-    const double yPos = 460.0;
+    double xDest;
+    double moveTime;
+    bool direction;
+    const double yPos = 450.0;
 public:
     //konstruktor
     Snail();
@@ -16,8 +19,8 @@ public:
     //getter
     double getXPos() const;
     double getYPos() const;
-    
+    bool getDirection() const;
     //menggerakkan snail
-    void move(double, double,double);
+    void move(double, double, bool);
 };
 #endif

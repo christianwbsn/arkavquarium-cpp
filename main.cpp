@@ -102,29 +102,6 @@ int main( int argc, char* args[] )
             fpc_start = now;
             frames_passed = 0;
         }
-
-        // Gambar ikan di posisi yang tepat.
-        draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
-        draw_text(fps_text, 18, 10, 30, 0, 0, 0);
-        draw_text("tujuan", 18, 50, 450, 0, 0, 0);
-        for(int i=0;i<tank.listOfFishFood.getSize();i++){
-            draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
-        }
-        for(int i=0;i<tank.listOfGuppy.getSize();i++){
-            // cout << tank.listOfGuppy.get(i).getDirection() << endl;
-            if(tank.listOfGuppy.get(i).getDirection()){
-                draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
-            }else{
-                draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
-            }
-        }
-        for(int i=0;i<tank.listOfFishFood.getSize();i++){
-            if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
-                tank.listOfFishFood.remove(tank.listOfFishFood.get(i));
-            }else{
-                tank.listOfFishFood.get(i).move();
-            }
-        }
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
             double xx;
             double yy;
@@ -154,7 +131,76 @@ int main( int argc, char* args[] )
                 xx = (double)(rand() % SCREEN_WIDTH + 1);
                 yy = (double)(rand() % SCREEN_HEIGHT + 1);
             }
-            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last, huntFood);       
+            if(tank.listOfGuppy.get(i).getSize() >= 2 && tank.listOfGuppy.get(i).getCoinTime()<=0){
+                tank.listOfCoin.add(tank.listOfGuppy.get(i).extractCoin());
+                cout << "masuk sini" << endl;
+            }
+            tank.listOfGuppy.get(i).move(xx, yy, sec_since_last, huntFood);
+            tank.listOfGuppy.get(i).setCoinTime(sec_since_last);       
+        }
+
+        // Gambar ikan di posisi yang tepat.
+        draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
+        draw_text(fps_text, 18, 10, 30, 0, 0, 0);
+        for(int i=0;i<tank.listOfFishFood.getSize();i++){
+            draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
+        }
+        for(int i=0;i<tank.listOfCoin.getSize();i++){
+            draw_image("images/Coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
+        }
+        for(int i=0;i<tank.listOfGuppy.getSize();i++){
+            // cout << tank.listOfGuppy.get(i).getDirection() << endl;
+            if(tank.listOfGuppy.get(i).getDirection()){
+                draw_image("Guppsy.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+            }else{
+                draw_image("images/Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+            }
+        }
+        for(int i=0;i<tank.listOfFishFood.getSize();i++){
+            if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
+                tank.listOfFishFood.remove(tank.listOfFishFood.get(i));
+            }else{
+                tank.listOfFishFood.get(i).move();
+            }
+        }
+        for(int i=0;i<tank.listOfCoin.getSize();i++){
+            if(tank.listOfCoin.get(i).getXPos() > SCREEN_WIDTH || tank.listOfCoin.get(i).getXPos() < 0 || tank.listOfCoin.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfCoin.get(i).getYPos() < 0){
+                tank.listOfCoin.remove(tank.listOfCoin.get(i));
+            }else{
+                tank.listOfCoin.get(i).move();
+            }
+        }
+        double huntcoin = false;
+        double xx;
+        double yy;
+        if(!(tank.listOfCoin.isEmpty())){
+            huntcoin = true;
+            double minDistance = __LDBL_MAX__;
+                for(int j=0;j<tank.listOfCoin.getSize();j++){
+                    double currX = tank.getSnail().getXPos();
+                    double currY = tank.getSnail().getYPos();
+                    double tempX = tank.listOfCoin.get(j).getXPos();
+                    double tempY = tank.listOfCoin.get(j).getYPos();
+                    double tempDist = calculateDistance(tempX, tempY, currX, currY);
+                    if(tempDist < minDistance){
+                        minDistance = tempDist;
+                        xx = tempX;
+                        yy = tempY;
+                    }
+                    if(tempDist < 15){
+                        tank.listOfCoin.remove(tank.listOfCoin.get(j));
+                        
+                    }
+                }
+        }
+        else{
+            double xx = (double)(rand() % SCREEN_WIDTH + 1);
+        }
+        tank.getSnail().move(xx, sec_since_last,huntcoin);
+        if(tank.getSnail().getDirection()){
+            draw_image("images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+        }else{
+            draw_image("images/Snail_right_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
         }
         update_screen();
     }

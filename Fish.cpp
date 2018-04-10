@@ -40,7 +40,7 @@ void Fish::move(double x, double y, double t, bool huntFood){
         }else{
             this->direction = false;
         }
-    }else if(this->moveTime <= 0){
+    }else if(this->moveTime <= t){
         this->hungerTime -= 2;
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = x;

@@ -6,15 +6,17 @@ using namespace std;
 class Guppy : public Fish{
     private:
         int size;
-        int coinTime;
+        double coinTime;
         int coinValue;
         int foodEaten;
-        const int baseCoinTime = 3;
+        const double baseCoinTime = 15.0;
     public:
         Guppy();
         Guppy operator=(const Guppy& G);
         int getSize() const;
-        
+        int getCoinValue() const;
+        double getCoinTime() const;
+        void setCoinTime(double t);
         void eatFood();
         void grow();
         Coin extractCoin();

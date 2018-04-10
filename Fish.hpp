@@ -16,7 +16,7 @@ protected:
     int foodEaten;
     bool direction;
     int hungerTime;
-    const int fullTimeLimit = 60;
+    const int fullTimeLimit = 40;
     const int speed = 40;
 
 public:

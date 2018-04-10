@@ -2,13 +2,23 @@
 
 Guppy :: Guppy():Fish() {
 	this->size = 1;
-	this->coinTime = 1;
+	this->coinTime = baseCoinTime;
 	this->coinValue = 0;
 	this->foodEaten = 0;
 }
 
+double Guppy::getCoinTime() const{
+	return coinTime;
+}
 int Guppy::getSize() const {
 	return this->size;
+}
+int Guppy::getCoinValue() const{
+	return this->coinValue;
+}
+
+void Guppy::setCoinTime(double t){
+	coinTime-=t;
 }
 Guppy Guppy :: operator=(const Guppy& G){
 	this->size = G.size;
@@ -21,8 +31,8 @@ Guppy Guppy :: operator=(const Guppy& G){
 
 void Guppy::eatFood() {
 	this->foodEaten++;
-	this->hungerTime+=40;
-	if ((this->foodEaten == 3) or (this->foodEaten == 10)) {
+	this->hungerTime+=60;
+	if ((this->foodEaten == 2) or (this->foodEaten == 5)) {
 		grow();
 	}
 }
@@ -38,14 +48,6 @@ void Guppy::grow() {
 }
 
 Coin Guppy::extractCoin() {
-	int val;
-	
-	if (this->size == 2) {
-		val = 50;
-	}
-	else if (this->size == 3) {
-		val = 100;
-	}
-	
-	return Coin(val, this->getXPos(), this->getYPos());;
+	coinTime = baseCoinTime;
+	return Coin(coinValue, this->getXPos(), this->getYPos());
 }

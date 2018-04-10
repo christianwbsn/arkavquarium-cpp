@@ -27,7 +27,7 @@ LinkedList<FishFood> Aquarium::getListOfFishFood() const {
     return this->listOfFishFood;
 }  
 
-Snail Aquarium::getSnail(){
+Snail& Aquarium::getSnail(){
     return this->snail;
 }
 

@@ -32,7 +32,7 @@ public:
     LinkedList<FishFood> getListOfFishFood() const;  
 
 
-    Snail getSnail();
+    Snail& getSnail();
 
     // getter object in position (x,y)
     Guppy getGuppy(double, double) const;

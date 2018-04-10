@@ -9,15 +9,17 @@ using namespace std;
 class Coin{
 private:
     double value;
-    const double xPos;
+    double xPos;
     double yPos;
 public:
     //konstruktor
+    Coin();
     Coin(double,double,double);
     //getter
     double getXPos() const;
     double getYPos() const;
-    
+    double getValue() const;
+    Coin operator=(const Coin& C);
     //move
     void move();
 
