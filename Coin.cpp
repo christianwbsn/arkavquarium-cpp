@@ -22,8 +22,8 @@ double Coin :: getYPos() const{
 double Coin :: getValue() const{
     return value;
 }
-void Coin :: move(){
-    yPos+= 0.17;
+void Coin :: move(double t){
+    yPos+= 20*t;
 }
 
 Coin Coin :: operator=(const Coin& C){

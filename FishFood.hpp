@@ -14,7 +14,7 @@ public:
     //getter
     double getXPos() const;
     double getYPos() const;
-    void move();
+    void move(double t);
     FishFood operator=(const FishFood& F);
 };
 #endif

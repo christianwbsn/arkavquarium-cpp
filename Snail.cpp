@@ -35,7 +35,8 @@ void Snail :: move(double _x, double t, bool huntcoin){
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = _x;
         if(abs(this->xDest - this->xPos) < 10){
-
+            //Do nothing
+            
         }
         else if(this->xPos - this->xDest > 0){
             this->direction = true;
@@ -55,8 +56,10 @@ void Snail :: move(double _x, double t, bool huntcoin){
         this->moveTime -= t;
     }
     
-    double a = atan2(this->xDest-xPos, 0.0);
-    xPos = xPos + 20*sin(a)*t;
+    if(!(abs(this->xDest - this->xPos) < 5)){
+        double a = atan2(this->xDest-xPos, 0.0);
+        xPos = xPos + 20*sin(a)*t;
+    }
     
 }
 

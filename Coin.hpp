@@ -21,7 +21,7 @@ public:
     double getValue() const;
     Coin operator=(const Coin& C);
     //move
-    void move();
+    void move(double t);
 
 };
 #endif

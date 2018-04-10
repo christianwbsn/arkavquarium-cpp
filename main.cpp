@@ -49,8 +49,21 @@ int main( int argc, char* args[] )
             reset_click_change();
             click_x = get_click_x();
             click_y = get_click_y();
-            FishFood food(click_x,click_y);
-            tank.listOfFishFood.add(food);
+            bool isCoin = false;
+            for(int i=0; i<tank.listOfCoin.getSize(); i++){
+                double coinX = tank.listOfCoin.get(i).getXPos();
+                double coinY = tank.listOfCoin.get(i).getYPos();
+                double tempDist = calculateDistance(coinX, coinY, click_x, click_y);
+                if(tempDist < 15){
+                    tank.listOfCoin.remove(tank.listOfCoin.get(i));
+                    isCoin = true;
+                    break;
+                }
+            }
+            if(!isCoin){
+                FishFood food(click_x,click_y);
+                tank.listOfFishFood.add(food);
+            }
         }
         
         // Gerakkan ikan selama tombol panah ditekan
@@ -160,14 +173,14 @@ int main( int argc, char* args[] )
             if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
                 tank.listOfFishFood.remove(tank.listOfFishFood.get(i));
             }else{
-                tank.listOfFishFood.get(i).move();
+                tank.listOfFishFood.get(i).move(sec_since_last);
             }
         }
         for(int i=0;i<tank.listOfCoin.getSize();i++){
             if(tank.listOfCoin.get(i).getXPos() > SCREEN_WIDTH || tank.listOfCoin.get(i).getXPos() < 0 || tank.listOfCoin.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfCoin.get(i).getYPos() < 0){
                 tank.listOfCoin.remove(tank.listOfCoin.get(i));
             }else{
-                tank.listOfCoin.get(i).move();
+                tank.listOfCoin.get(i).move(sec_since_last);
             }
         }
         double huntcoin = false;
