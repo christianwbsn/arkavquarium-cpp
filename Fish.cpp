@@ -56,7 +56,6 @@ void Fish::move(double x, double y, double t, bool huntFood){
     double a = atan2(this->xDest-xPos,this->yDest-yPos);
     this->xPos += this->speed*sin(a)*t;
     this->yPos += this->speed*cos(a)*t;
-    this->moveTime -= t;
     // cout << x << ":" << y << ":" << a << endl;
 }
 

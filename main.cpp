@@ -109,7 +109,7 @@ int main( int argc, char* args[] )
             // cout << tank.listOfGuppy.get(i).getHungerTime() << endl;
             if(tank.listOfGuppy.get(i).isHungry() && !tank.listOfFishFood.isEmpty()){
                 huntFood = true;
-                // cout << "lapar coy" << endl;
+                cout << "lapar coy" << endl;
                 double currX = tank.listOfGuppy.get(i).getXPos();
                 double currY = tank.listOfGuppy.get(i).getYPos();
                 double minDistance = __LDBL_MAX__;
@@ -194,8 +194,9 @@ int main( int argc, char* args[] )
                 }
         }
         else{
-            double xx = (double)(rand() % SCREEN_WIDTH + 1);
+            xx = (double)(rand() % SCREEN_WIDTH + 1);
         }
+        cout << xx << endl;
         tank.getSnail().move(xx, sec_since_last,huntcoin);
         if(tank.getSnail().getDirection()){
             draw_image("images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());

@@ -30,10 +30,14 @@ double Snail :: getYPos() const{
     
 //menggerakkan snail
 void Snail :: move(double _x, double t, bool huntcoin){
+    cout << _x << endl;
     if(huntcoin){
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = _x;
-        if(this->xPos - this->xDest > 0){
+        if(abs(this->xDest - this->xPos) < 10){
+
+        }
+        else if(this->xPos - this->xDest > 0){
             this->direction = true;
         }else{
             this->direction = false;
