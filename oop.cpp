@@ -13,7 +13,7 @@ high_resolution_clock::time_point start = high_resolution_clock::now();
 double time_since_start()
 {
     high_resolution_clock::time_point now = high_resolution_clock::now();
-        return duration_cast<duration<double>>(now - start).count();
+        return duration_cast<duration<double> >(now - start).count();
 }
 
 SDL_Window* sdlWindow;
@@ -102,14 +102,14 @@ void draw_text(std::string text, int font_size, int x, int y, unsigned char r, u
     }
 
     TTF_Font* font = loadedFontSizes[font_size];
-    SDL_Surface* result = TTF_RenderText_Blended(font, text.c_str(), {r, g, b});
-    SDL_Rect dest;
-    dest.x = x;
-    dest.y = y;
-    dest.w = result->w;
-    dest.h = result->h;
-    SDL_BlitSurface(result, NULL, gScreenSurface, &dest);
-    SDL_FreeSurface(result);
+    //~ SDL_Surface* result = TTF_RenderText_Blended(font, text.c_str(), r, g, b);
+    //~ SDL_Rect dest;
+    //~ dest.x = x;
+    //~ dest.y = y;
+    //~ dest.w = result->w;
+    //~ dest.h = result->h;
+    //~ SDL_BlitSurface(result, NULL, gScreenSurface, &dest);
+    //~ SDL_FreeSurface(result);
 }
 
 void clear_screen() {
