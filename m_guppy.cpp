@@ -3,7 +3,7 @@
 using namespace std;
 
 int main() {
-	Guppy gup1;
+	Guppy gup1; 
 	Guppy gup2;
 	gup2 = gup1;
 
