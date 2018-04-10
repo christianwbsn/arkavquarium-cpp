@@ -40,10 +40,10 @@ void Guppy::eatFood() {
 void Guppy::grow() {
 	this->size++;
 	if (this->coinValue == 0) {
-		this->coinValue = 50;
+		this->coinValue = 25;
 	}
-	else if (this->coinValue == 50) {
-		this->coinValue = 100;
+	else if (this->coinValue == 25) {
+		this->coinValue = 50;
 	}
 }
 

@@ -24,7 +24,7 @@ public:
     Fish();
     Fish& operator=(const Fish& F);
     //mengeluarkan koin setiap C waktu
-    virtual Coin extractCoin()=0;
+    // virtual Coin extractCoin()=0;
     //memakan makanan
     virtual void eatFood()=0;
     //Bergerak sesuai dengan status

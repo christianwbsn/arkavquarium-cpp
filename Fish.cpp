@@ -16,7 +16,7 @@ Fish::Fish()
     this->moveTime = 0;
     this->foodEaten = 0;
     this->direction = true;
-    this->hungerTime = 50;
+    this->hungerTime = 60;
 }
 
 Fish& Fish :: operator=(const Fish& F){

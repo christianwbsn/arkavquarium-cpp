@@ -13,7 +13,7 @@ high_resolution_clock::time_point start = high_resolution_clock::now();
 double time_since_start()
 {
     high_resolution_clock::time_point now = high_resolution_clock::now();
-        return duration_cast<duration<double>>(now - start).count();
+        return duration_cast<duration<double> >(now - start).count();
 }
 
 SDL_Window* sdlWindow;
