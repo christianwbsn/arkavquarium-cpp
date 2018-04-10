@@ -90,18 +90,28 @@ int main( int argc, char* args[] )
         for (auto key : get_tapped_keys()) {
             switch (key) {
             // r untuk reset
-            case SDLK_r:
+            case SDLK_r:{
                 cy = SCREEN_HEIGHT / 2;
                 cx = SCREEN_WIDTH / 2;
                 break;
+            }
             // x untuk keluar
-            case SDLK_x:
+            case SDLK_x:{
                 running = false;
                 break;
+            }
             
-            case SDLK_f:
+            case SDLK_f:{
                 Guppy ikan;
                 tank.listOfGuppy.add(ikan);
+                break;
+            }
+
+            case SDLK_p:{
+                Piranha pir;
+                tank.listOfPiranha.add(pir);
+                break;
+            }
             }
         }
 
@@ -115,6 +125,42 @@ int main( int argc, char* args[] )
             fpc_start = now;
             frames_passed = 0;
         }
+
+        for(int i=0;i<tank.listOfPiranha.getSize();i++){
+            cout << "flag 1" << endl;
+            double xx;
+            double yy;
+            bool huntFood = false;
+            // cout << tank.listOfGuppy.get(i).getHungerTime() << endl;
+            if(tank.listOfPiranha.get(i).isHungry() && !tank.listOfGuppy.isEmpty()){
+                huntFood = true;
+                cout << "Piranha Lapar" << endl;
+                double currX = tank.listOfPiranha.get(i).getXPos();
+                double currY = tank.listOfPiranha.get(i).getYPos();
+                double minDistance = __LDBL_MAX__;
+                for(int j=0;j<tank.listOfGuppy.getSize();j++){
+                    double tempX = tank.listOfGuppy.get(j).getXPos();
+                    double tempY = tank.listOfGuppy.get(j).getYPos();
+                    double tempDist = calculateDistance(tempX, tempY, currX, currY);
+                    if(tempDist < minDistance){
+                        minDistance = tempDist;
+                        xx = tempX;
+                        yy = tempY;
+                    }
+                    if(tempDist < 15){
+                        tank.listOfPiranha.get(i).eatFood();
+                        tank.listOfCoin.add(tank.listOfPiranha.get(i).extractCoin(tank.listOfGuppy.get(j).getSize()));
+                        tank.listOfGuppy.remove(tank.listOfGuppy.get(j));
+                    }
+                }
+            }else{
+                xx = (double)(rand() % SCREEN_WIDTH + 1);
+                yy = (double)(rand() % SCREEN_HEIGHT + 1);
+            }
+            tank.listOfPiranha.get(i).move(xx, yy, sec_since_last, huntFood); 
+        }
+        cout << "flag 2" << endl;
+
         for(int i=0;i<tank.listOfGuppy.getSize();i++){
             double xx;
             double yy;
@@ -155,6 +201,13 @@ int main( int argc, char* args[] )
         // Gambar ikan di posisi yang tepat.
         draw_text("Panah untuk bergerak, r untuk reset, x untuk keluar", 18, 10, 10, 0, 0, 0);
         draw_text(fps_text, 18, 10, 30, 0, 0, 0);
+        for(int i=0;i<tank.listOfPiranha.getSize();i++){
+            if(tank.listOfPiranha.get(i).getDirection()){
+                draw_image("images/Piranha_left_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+            }else{
+                draw_image("images/Piranha_right_side.png",tank.listOfPiranha.get(i).getXPos(),tank.listOfPiranha.get(i).getYPos());
+            }
+        }
         for(int i=0;i<tank.listOfFishFood.getSize();i++){
             draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }

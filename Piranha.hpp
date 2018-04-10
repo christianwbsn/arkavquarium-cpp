@@ -10,7 +10,7 @@ class Piranha : public Fish{
         Piranha();
         
         //mengeluarkan coin
-        Coin extractCoin();
+        Coin extractCoin(int);
         //memakan makanan
         void eatFood();
         Piranha operator=(const Piranha& P);
