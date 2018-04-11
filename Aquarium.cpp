@@ -7,6 +7,7 @@ Aquarium::Aquarium() {
     this->snail = S;
     std::cout<<this->snail.getXPos()<<std::endl;
     this->money = 50;
+    this->egg = 0;
     Guppy ikan1;
     this->listOfGuppy.add(ikan1);
     Guppy ikan2;
@@ -49,6 +50,14 @@ FishFood Aquarium::getFishFood(double x, double y) const {
 
 int Aquarium::getMoney(){
     return this->money;
+}
+
+int Aquarium::getEgg(){
+    return this->egg;
+}
+
+void Aquarium::buyEgg(){
+    this->egg++;
 }
 
 void Aquarium::increaseMoney(int value){
