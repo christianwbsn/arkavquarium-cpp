@@ -377,6 +377,7 @@ int main( int argc, char* args[] )
             }
             else{
                 xx = (double)(rand() % SCREEN_WIDTH + 1);
+                huntcoin = false;
             }
             cout << xx << endl;
             tank.getSnail().move(xx, sec_since_last,huntcoin);
