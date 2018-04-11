@@ -3,7 +3,6 @@
 #include <math.h>
 #include <sstream>
 #include "Aquarium.hpp"
-const double speed = 50; // pixels per second
 
 double calculateDistance(double x1, double y1, double x2, double y2){
     return sqrt(pow(x2-x1,2) + pow(y2-y1,2));
@@ -35,7 +34,6 @@ int main( int argc, char* args[] )
 
     double click_x = 0;
     double click_y = 0;
-    double sebelum = 0;
     bool win = false;
     bool lose = false;
     while (running) {
@@ -185,8 +183,8 @@ int main( int argc, char* args[] )
 
 			if(!win){
 				for(int i=0;i<tank.listOfPiranha.getSize();i++){
-					double xx;
-					double yy;
+					double xx = 0.0;
+					double yy = 0.0;
 					bool huntFood = false;
 					if(tank.listOfPiranha.get(i).getHungerTime() < 20){
 						tank.listOfPiranha.remove(tank.listOfPiranha.get(i));
