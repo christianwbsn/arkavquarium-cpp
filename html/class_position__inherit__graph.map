@@ -1,8 +1,8 @@
 <map id="Position" name="Position">
-<area shape="rect" id="node2" href="$class_coin.html" title="Coin" alt="" coords="5,79,54,104"/>
-<area shape="rect" id="node3" href="$class_fish.html" title="Fish" alt="" coords="78,79,125,104"/>
-<area shape="rect" id="node6" href="$class_fish_food.html" title="FishFood" alt="" coords="149,79,226,104"/>
-<area shape="rect" id="node7" href="$class_snail.html" title="Snail" alt="" coords="250,79,301,104"/>
-<area shape="rect" id="node4" href="$class_guppy.html" title="Guppy" alt="" coords="27,152,88,177"/>
-<area shape="rect" id="node5" href="$class_piranha.html" title="Piranha" alt="" coords="112,152,179,177"/>
+<area shape="rect" id="node2" href="$class_coin.html" title="{Coin\n|&#45; value\l|+ Coin()\l+ Coin()\l+ getValue()\l+ operator=()\l+ move()\l}" alt="" coords="5,313,104,440"/>
+<area shape="rect" id="node3" href="$class_fish.html" title="{Fish\n|# xDest\l# yDest\l# moveTime\l# foodEaten\l# direction\l# hungerTime\l# fullTimeLimit\l# speed\l|+ Fish()\l+ operator=()\l+ eatFood()\l+ move()\l+ getSize()\l+ getFoodEaten()\l+ getDirection()\l+ getHungerTime()\l+ getFoodNeeded()\l+ getFullTimeLimit()\l+ getSpeed()\l+ isHungry()\l}" alt="" coords="128,220,267,533"/>
+<area shape="rect" id="node6" href="$class_fish_food.html" title="{FishFood\n||+ FishFood()\l+ FishFood()\l+ move()\l+ operator=()\l}" alt="" coords="291,320,390,433"/>
+<area shape="rect" id="node7" href="$class_snail.html" title="{Snail\n|&#45; xDest\l&#45; moveTime\l&#45; direction\l|+ Snail()\l+ Snail()\l+ operator=()\l+ getDirection()\l+ move()\l}" alt="" coords="414,300,527,453"/>
+<area shape="rect" id="node4" href="$class_guppy.html" title="{Guppy\n|&#45; size\l&#45; coinTime\l&#45; coinValue\l&#45; foodEaten\l&#45; baseCoinTime\l|+ Guppy()\l+ operator=()\l+ getSize()\l+ getCoinValue()\l+ getCoinTime()\l+ setCoinTime()\l+ eatFood()\l+ grow()\l+ extractCoin()\l}" alt="" coords="68,581,189,815"/>
+<area shape="rect" id="node5" href="$class_piranha.html" title="{Piranha\n||+ Piranha()\l+ extractCoin()\l+ eatFood()\l+ operator=()\l}" alt="" coords="212,641,321,755"/>
 </map>

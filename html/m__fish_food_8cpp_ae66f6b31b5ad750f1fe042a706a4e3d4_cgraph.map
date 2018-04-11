@@ -1,5 +1,5 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="104,5,230,31"/>
-<area shape="rect" id="node3" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="104,55,230,80"/>
+<area shape="rect" id="node2" href="$class_position.html#a961116b828f39200092daddffca2a63c" title="Position::getXPos" alt="" coords="104,5,230,31"/>
+<area shape="rect" id="node3" href="$class_position.html#a9bf258e61c4d01643599c175007254ac" title="Position::getYPos" alt="" coords="104,55,230,80"/>
 <area shape="rect" id="node4" href="$class_fish_food.html#ab4dac48078ac8d5d1442c4fc4f4b8971" title="FishFood::move" alt="" coords="108,104,225,129"/>
 </map>

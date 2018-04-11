@@ -1,5 +1,5 @@
 <map id="Fish" name="Fish">
-<area shape="rect" id="node3" href="$class_guppy.html" title="Guppy" alt="" coords="5,152,66,177"/>
-<area shape="rect" id="node4" href="$class_piranha.html" title="Piranha" alt="" coords="90,152,157,177"/>
-<area shape="rect" id="node2" href="$class_position.html" title="Position" alt="" coords="45,5,114,31"/>
+<area shape="rect" id="node3" href="$class_guppy.html" title="{Guppy\n|&#45; size\l&#45; coinTime\l&#45; coinValue\l&#45; foodEaten\l&#45; baseCoinTime\l|+ Guppy()\l+ operator=()\l+ getSize()\l+ getCoinValue()\l+ getCoinTime()\l+ setCoinTime()\l+ eatFood()\l+ grow()\l+ extractCoin()\l}" alt="" coords="5,581,126,815"/>
+<area shape="rect" id="node4" href="$class_piranha.html" title="{Piranha\n||+ Piranha()\l+ extractCoin()\l+ eatFood()\l+ operator=()\l}" alt="" coords="150,641,259,755"/>
+<area shape="rect" id="node2" href="$class_position.html" title="{Position\n|# xPos\l# yPos\l|+ Position()\l+ Position()\l+ ~Position()\l+ getXPos()\l+ getYPos()\l+ setXPos()\l+ setYPos()\l}" alt="" coords="87,5,184,172"/>
 </map>

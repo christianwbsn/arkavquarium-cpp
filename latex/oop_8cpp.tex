@@ -1,0 +1,251 @@
+\hypertarget{oop_8cpp}{}\section{oop.\+cpp File Reference}
+\label{oop_8cpp}\index{oop.\+cpp@{oop.\+cpp}}
+{\ttfamily \#include \char`\"{}oop.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+Include dependency graph for oop.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{oop_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{oop_8cpp_a1ba1773fee3381786a816dc207a1f8d5}{time\+\_\+since\+\_\+start}} ()
+\item 
+bool \mbox{\hyperlink{oop_8cpp_aee8048628ff2b5c026c9e15acdcaacb8}{init}} ()
+\item 
+void \mbox{\hyperlink{oop_8cpp_a5ae591df94fc66ccb85cbb6565368bca}{close}} ()
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \mbox{\hyperlink{oop_8cpp_a0e7ac416d5997995bce4c268daa46686}{load\+Surface}} (std\+::string path)
+\item 
+void \mbox{\hyperlink{oop_8cpp_a0f01596e4fd0a81c514c706c4936ee8d}{draw\+\_\+image}} (std\+::string filename, int x, int y)
+\item 
+void \mbox{\hyperlink{oop_8cpp_a2b13ce610f0fb0df7a95eb2307e319d2}{draw\+\_\+text}} (std\+::string text, int font\+\_\+size, int x, int y, unsigned char r, unsigned char g, unsigned char b)
+\item 
+void \mbox{\hyperlink{oop_8cpp_a4953d1edcbbfc7e420c423ded1d5621a}{clear\+\_\+screen}} ()
+\item 
+void \mbox{\hyperlink{oop_8cpp_a10da25e92e69613be93d099bb029feb2}{update\+\_\+screen}} ()
+\item 
+void \mbox{\hyperlink{oop_8cpp_ab19fbad269feb4f8cf725031233ba56e}{handle\+\_\+input}} ()
+\item 
+bool \mbox{\hyperlink{oop_8cpp_a1b14e3b0f5799f93f8dab7f5c6819298}{quit\+\_\+pressed}} ()
+\item 
+bool \mbox{\hyperlink{oop_8cpp_a19e5c31ab004637596d03b4d31b7a501}{get\+\_\+change\+\_\+click}} ()
+\item 
+int \mbox{\hyperlink{oop_8cpp_a503ce1f8acb57d531e734466212d1974}{get\+\_\+click\+\_\+x}} ()
+\item 
+int \mbox{\hyperlink{oop_8cpp_ab5c53ed5c0db3a935ae04e12fa8a4269}{get\+\_\+click\+\_\+y}} ()
+\item 
+void \mbox{\hyperlink{oop_8cpp_aaef2659bbde0466a9fc55be17d42ae46}{reset\+\_\+click\+\_\+change}} ()
+\item 
+const std\+::set$<$ S\+D\+L\+\_\+\+Keycode $>$ \& \mbox{\hyperlink{oop_8cpp_a155dba9d2b234776d0fb743da0dcdbc2}{get\+\_\+pressed\+\_\+keys}} ()
+\item 
+const std\+::set$<$ S\+D\+L\+\_\+\+Keycode $>$ \& \mbox{\hyperlink{oop_8cpp_a4fdfe498ed93ea27801b69f2158e5e6a}{get\+\_\+tapped\+\_\+keys}} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+high\+\_\+resolution\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{oop_8cpp_a1735b8c468a759db2a102e031c6b1436}{start}} = high\+\_\+resolution\+\_\+clock\+::now()
+\item 
+S\+D\+L\+\_\+\+Window $\ast$ \mbox{\hyperlink{oop_8cpp_a7d570c1c3b1ac98019869517e6062462}{sdl\+Window}}
+\item 
+std\+::map$<$ std\+::string, S\+D\+L\+\_\+\+Surface $\ast$ $>$ \mbox{\hyperlink{oop_8cpp_a628cbb50ed852f954df9e6e5288b9f1c}{loaded\+Surfaces}}
+\item 
+std\+::map$<$ int, T\+T\+F\+\_\+\+Font $\ast$ $>$ \mbox{\hyperlink{oop_8cpp_a3dd6e6fa4b946f1a7c7325b7be30835e}{loaded\+Font\+Sizes}}
+\item 
+S\+D\+L\+\_\+\+Surface $\ast$ \mbox{\hyperlink{oop_8cpp_aa93b1188c9e7061fda6ed6d81cd1a774}{g\+Screen\+Surface}} = N\+U\+LL
+\item 
+bool \mbox{\hyperlink{oop_8cpp_ac746fa6ad48d19984a159f14bec028a3}{quit}} = false
+\item 
+std\+::set$<$ S\+D\+L\+\_\+\+Keycode $>$ \mbox{\hyperlink{oop_8cpp_a82122c0a11768870334b09ab6483f96c}{pressed\+Keys}}
+\item 
+std\+::set$<$ S\+D\+L\+\_\+\+Keycode $>$ \mbox{\hyperlink{oop_8cpp_afee38be0153d2eb7d46f4f1fd9d3dc8b}{tapped\+Keys}}
+\item 
+int \mbox{\hyperlink{oop_8cpp_a89aa1c1525f82269298a01d552e60037}{click\+\_\+x}} = 0
+\item 
+int \mbox{\hyperlink{oop_8cpp_aba43294be5cc34c20fa3d3a58af45f0d}{click\+\_\+y}} = 0
+\item 
+bool \mbox{\hyperlink{oop_8cpp_aafeed4cee0ab326df47e842452f17d94}{click\+\_\+change}} = false
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{oop_8cpp_a4953d1edcbbfc7e420c423ded1d5621a}\label{oop_8cpp_a4953d1edcbbfc7e420c423ded1d5621a}} 
+\index{oop.\+cpp@{oop.\+cpp}!clear\+\_\+screen@{clear\+\_\+screen}}
+\index{clear\+\_\+screen@{clear\+\_\+screen}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{clear\+\_\+screen()}{clear\_screen()}}
+{\footnotesize\ttfamily void clear\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a5ae591df94fc66ccb85cbb6565368bca}\label{oop_8cpp_a5ae591df94fc66ccb85cbb6565368bca}} 
+\index{oop.\+cpp@{oop.\+cpp}!close@{close}}
+\index{close@{close}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{close()}{close()}}
+{\footnotesize\ttfamily void close (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a0f01596e4fd0a81c514c706c4936ee8d}\label{oop_8cpp_a0f01596e4fd0a81c514c706c4936ee8d}} 
+\index{oop.\+cpp@{oop.\+cpp}!draw\+\_\+image@{draw\+\_\+image}}
+\index{draw\+\_\+image@{draw\+\_\+image}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+image()}{draw\_image()}}
+{\footnotesize\ttfamily void draw\+\_\+image (\begin{DoxyParamCaption}\item[{std\+::string}]{filename,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{oop_8cpp_a0f01596e4fd0a81c514c706c4936ee8d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{oop_8cpp_a2b13ce610f0fb0df7a95eb2307e319d2}\label{oop_8cpp_a2b13ce610f0fb0df7a95eb2307e319d2}} 
+\index{oop.\+cpp@{oop.\+cpp}!draw\+\_\+text@{draw\+\_\+text}}
+\index{draw\+\_\+text@{draw\+\_\+text}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{draw\+\_\+text()}{draw\_text()}}
+{\footnotesize\ttfamily void draw\+\_\+text (\begin{DoxyParamCaption}\item[{std\+::string}]{text,  }\item[{int}]{font\+\_\+size,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{unsigned char}]{r,  }\item[{unsigned char}]{g,  }\item[{unsigned char}]{b }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a19e5c31ab004637596d03b4d31b7a501}\label{oop_8cpp_a19e5c31ab004637596d03b4d31b7a501}} 
+\index{oop.\+cpp@{oop.\+cpp}!get\+\_\+change\+\_\+click@{get\+\_\+change\+\_\+click}}
+\index{get\+\_\+change\+\_\+click@{get\+\_\+change\+\_\+click}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+change\+\_\+click()}{get\_change\_click()}}
+{\footnotesize\ttfamily bool get\+\_\+change\+\_\+click (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a503ce1f8acb57d531e734466212d1974}\label{oop_8cpp_a503ce1f8acb57d531e734466212d1974}} 
+\index{oop.\+cpp@{oop.\+cpp}!get\+\_\+click\+\_\+x@{get\+\_\+click\+\_\+x}}
+\index{get\+\_\+click\+\_\+x@{get\+\_\+click\+\_\+x}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+click\+\_\+x()}{get\_click\_x()}}
+{\footnotesize\ttfamily int get\+\_\+click\+\_\+x (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_ab5c53ed5c0db3a935ae04e12fa8a4269}\label{oop_8cpp_ab5c53ed5c0db3a935ae04e12fa8a4269}} 
+\index{oop.\+cpp@{oop.\+cpp}!get\+\_\+click\+\_\+y@{get\+\_\+click\+\_\+y}}
+\index{get\+\_\+click\+\_\+y@{get\+\_\+click\+\_\+y}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+click\+\_\+y()}{get\_click\_y()}}
+{\footnotesize\ttfamily int get\+\_\+click\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a155dba9d2b234776d0fb743da0dcdbc2}\label{oop_8cpp_a155dba9d2b234776d0fb743da0dcdbc2}} 
+\index{oop.\+cpp@{oop.\+cpp}!get\+\_\+pressed\+\_\+keys@{get\+\_\+pressed\+\_\+keys}}
+\index{get\+\_\+pressed\+\_\+keys@{get\+\_\+pressed\+\_\+keys}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+pressed\+\_\+keys()}{get\_pressed\_keys()}}
+{\footnotesize\ttfamily const std\+::set$<$S\+D\+L\+\_\+\+Keycode$>$\& get\+\_\+pressed\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a4fdfe498ed93ea27801b69f2158e5e6a}\label{oop_8cpp_a4fdfe498ed93ea27801b69f2158e5e6a}} 
+\index{oop.\+cpp@{oop.\+cpp}!get\+\_\+tapped\+\_\+keys@{get\+\_\+tapped\+\_\+keys}}
+\index{get\+\_\+tapped\+\_\+keys@{get\+\_\+tapped\+\_\+keys}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{get\+\_\+tapped\+\_\+keys()}{get\_tapped\_keys()}}
+{\footnotesize\ttfamily const std\+::set$<$S\+D\+L\+\_\+\+Keycode$>$\& get\+\_\+tapped\+\_\+keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_ab19fbad269feb4f8cf725031233ba56e}\label{oop_8cpp_ab19fbad269feb4f8cf725031233ba56e}} 
+\index{oop.\+cpp@{oop.\+cpp}!handle\+\_\+input@{handle\+\_\+input}}
+\index{handle\+\_\+input@{handle\+\_\+input}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{handle\+\_\+input()}{handle\_input()}}
+{\footnotesize\ttfamily void handle\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_aee8048628ff2b5c026c9e15acdcaacb8}\label{oop_8cpp_aee8048628ff2b5c026c9e15acdcaacb8}} 
+\index{oop.\+cpp@{oop.\+cpp}!init@{init}}
+\index{init@{init}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily bool init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a0e7ac416d5997995bce4c268daa46686}\label{oop_8cpp_a0e7ac416d5997995bce4c268daa46686}} 
+\index{oop.\+cpp@{oop.\+cpp}!load\+Surface@{load\+Surface}}
+\index{load\+Surface@{load\+Surface}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Surface()}{loadSurface()}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Surface$\ast$ load\+Surface (\begin{DoxyParamCaption}\item[{std\+::string}]{path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a1b14e3b0f5799f93f8dab7f5c6819298}\label{oop_8cpp_a1b14e3b0f5799f93f8dab7f5c6819298}} 
+\index{oop.\+cpp@{oop.\+cpp}!quit\+\_\+pressed@{quit\+\_\+pressed}}
+\index{quit\+\_\+pressed@{quit\+\_\+pressed}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{quit\+\_\+pressed()}{quit\_pressed()}}
+{\footnotesize\ttfamily bool quit\+\_\+pressed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_aaef2659bbde0466a9fc55be17d42ae46}\label{oop_8cpp_aaef2659bbde0466a9fc55be17d42ae46}} 
+\index{oop.\+cpp@{oop.\+cpp}!reset\+\_\+click\+\_\+change@{reset\+\_\+click\+\_\+change}}
+\index{reset\+\_\+click\+\_\+change@{reset\+\_\+click\+\_\+change}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{reset\+\_\+click\+\_\+change()}{reset\_click\_change()}}
+{\footnotesize\ttfamily void reset\+\_\+click\+\_\+change (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a1ba1773fee3381786a816dc207a1f8d5}\label{oop_8cpp_a1ba1773fee3381786a816dc207a1f8d5}} 
+\index{oop.\+cpp@{oop.\+cpp}!time\+\_\+since\+\_\+start@{time\+\_\+since\+\_\+start}}
+\index{time\+\_\+since\+\_\+start@{time\+\_\+since\+\_\+start}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{time\+\_\+since\+\_\+start()}{time\_since\_start()}}
+{\footnotesize\ttfamily double time\+\_\+since\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{oop_8cpp_a10da25e92e69613be93d099bb029feb2}\label{oop_8cpp_a10da25e92e69613be93d099bb029feb2}} 
+\index{oop.\+cpp@{oop.\+cpp}!update\+\_\+screen@{update\+\_\+screen}}
+\index{update\+\_\+screen@{update\+\_\+screen}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{update\+\_\+screen()}{update\_screen()}}
+{\footnotesize\ttfamily void update\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{oop_8cpp_aafeed4cee0ab326df47e842452f17d94}\label{oop_8cpp_aafeed4cee0ab326df47e842452f17d94}} 
+\index{oop.\+cpp@{oop.\+cpp}!click\+\_\+change@{click\+\_\+change}}
+\index{click\+\_\+change@{click\+\_\+change}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{click\+\_\+change}{click\_change}}
+{\footnotesize\ttfamily bool click\+\_\+change = false}
+
+\mbox{\Hypertarget{oop_8cpp_a89aa1c1525f82269298a01d552e60037}\label{oop_8cpp_a89aa1c1525f82269298a01d552e60037}} 
+\index{oop.\+cpp@{oop.\+cpp}!click\+\_\+x@{click\+\_\+x}}
+\index{click\+\_\+x@{click\+\_\+x}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{click\+\_\+x}{click\_x}}
+{\footnotesize\ttfamily int click\+\_\+x = 0}
+
+\mbox{\Hypertarget{oop_8cpp_aba43294be5cc34c20fa3d3a58af45f0d}\label{oop_8cpp_aba43294be5cc34c20fa3d3a58af45f0d}} 
+\index{oop.\+cpp@{oop.\+cpp}!click\+\_\+y@{click\+\_\+y}}
+\index{click\+\_\+y@{click\+\_\+y}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{click\+\_\+y}{click\_y}}
+{\footnotesize\ttfamily int click\+\_\+y = 0}
+
+\mbox{\Hypertarget{oop_8cpp_aa93b1188c9e7061fda6ed6d81cd1a774}\label{oop_8cpp_aa93b1188c9e7061fda6ed6d81cd1a774}} 
+\index{oop.\+cpp@{oop.\+cpp}!g\+Screen\+Surface@{g\+Screen\+Surface}}
+\index{g\+Screen\+Surface@{g\+Screen\+Surface}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{g\+Screen\+Surface}{gScreenSurface}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Surface$\ast$ g\+Screen\+Surface = N\+U\+LL}
+
+\mbox{\Hypertarget{oop_8cpp_a3dd6e6fa4b946f1a7c7325b7be30835e}\label{oop_8cpp_a3dd6e6fa4b946f1a7c7325b7be30835e}} 
+\index{oop.\+cpp@{oop.\+cpp}!loaded\+Font\+Sizes@{loaded\+Font\+Sizes}}
+\index{loaded\+Font\+Sizes@{loaded\+Font\+Sizes}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{loaded\+Font\+Sizes}{loadedFontSizes}}
+{\footnotesize\ttfamily std\+::map$<$int, T\+T\+F\+\_\+\+Font$\ast$$>$ loaded\+Font\+Sizes}
+
+\mbox{\Hypertarget{oop_8cpp_a628cbb50ed852f954df9e6e5288b9f1c}\label{oop_8cpp_a628cbb50ed852f954df9e6e5288b9f1c}} 
+\index{oop.\+cpp@{oop.\+cpp}!loaded\+Surfaces@{loaded\+Surfaces}}
+\index{loaded\+Surfaces@{loaded\+Surfaces}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{loaded\+Surfaces}{loadedSurfaces}}
+{\footnotesize\ttfamily std\+::map$<$std\+::string, S\+D\+L\+\_\+\+Surface$\ast$$>$ loaded\+Surfaces}
+
+\mbox{\Hypertarget{oop_8cpp_a82122c0a11768870334b09ab6483f96c}\label{oop_8cpp_a82122c0a11768870334b09ab6483f96c}} 
+\index{oop.\+cpp@{oop.\+cpp}!pressed\+Keys@{pressed\+Keys}}
+\index{pressed\+Keys@{pressed\+Keys}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{pressed\+Keys}{pressedKeys}}
+{\footnotesize\ttfamily std\+::set$<$S\+D\+L\+\_\+\+Keycode$>$ pressed\+Keys}
+
+\mbox{\Hypertarget{oop_8cpp_ac746fa6ad48d19984a159f14bec028a3}\label{oop_8cpp_ac746fa6ad48d19984a159f14bec028a3}} 
+\index{oop.\+cpp@{oop.\+cpp}!quit@{quit}}
+\index{quit@{quit}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{quit}{quit}}
+{\footnotesize\ttfamily bool quit = false}
+
+\mbox{\Hypertarget{oop_8cpp_a7d570c1c3b1ac98019869517e6062462}\label{oop_8cpp_a7d570c1c3b1ac98019869517e6062462}} 
+\index{oop.\+cpp@{oop.\+cpp}!sdl\+Window@{sdl\+Window}}
+\index{sdl\+Window@{sdl\+Window}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{sdl\+Window}{sdlWindow}}
+{\footnotesize\ttfamily S\+D\+L\+\_\+\+Window$\ast$ sdl\+Window}
+
+\mbox{\Hypertarget{oop_8cpp_a1735b8c468a759db2a102e031c6b1436}\label{oop_8cpp_a1735b8c468a759db2a102e031c6b1436}} 
+\index{oop.\+cpp@{oop.\+cpp}!start@{start}}
+\index{start@{start}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily high\+\_\+resolution\+\_\+clock\+::time\+\_\+point start = high\+\_\+resolution\+\_\+clock\+::now()}
+
+\mbox{\Hypertarget{oop_8cpp_afee38be0153d2eb7d46f4f1fd9d3dc8b}\label{oop_8cpp_afee38be0153d2eb7d46f4f1fd9d3dc8b}} 
+\index{oop.\+cpp@{oop.\+cpp}!tapped\+Keys@{tapped\+Keys}}
+\index{tapped\+Keys@{tapped\+Keys}!oop.\+cpp@{oop.\+cpp}}
+\subsubsection{\texorpdfstring{tapped\+Keys}{tappedKeys}}
+{\footnotesize\ttfamily std\+::set$<$S\+D\+L\+\_\+\+Keycode$>$ tapped\+Keys}
+

@@ -1,6 +1,6 @@
 <map id="main" name="main">
-<area shape="rect" id="node2" href="$class_coin.html#a0e8ef8f6d9202e06bbdf355f9b51884e" title="Coin::getValue" alt="" coords="113,5,221,31"/>
-<area shape="rect" id="node3" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="104,55,230,80"/>
-<area shape="rect" id="node4" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="104,104,230,129"/>
+<area shape="rect" id="node2" href="$class_coin.html#a53cbddb74ac97ec54ec40f09beab3332" title="Coin::getValue" alt="" coords="113,5,221,31"/>
+<area shape="rect" id="node3" href="$class_position.html#a961116b828f39200092daddffca2a63c" title="Position::getXPos" alt="" coords="104,55,230,80"/>
+<area shape="rect" id="node4" href="$class_position.html#a9bf258e61c4d01643599c175007254ac" title="Position::getYPos" alt="" coords="104,104,230,129"/>
 <area shape="rect" id="node5" href="$class_coin.html#a58a2a28aa6c21f0045983755dad015dc" title="Coin::move" alt="" coords="122,153,211,179"/>
 </map>

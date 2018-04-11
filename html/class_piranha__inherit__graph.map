@@ -1,4 +1,4 @@
 <map id="Piranha" name="Piranha">
-<area shape="rect" id="node2" href="$class_fish.html" title="Fish" alt="" coords="16,79,63,104"/>
-<area shape="rect" id="node3" href="$class_position.html" title="Position" alt="" coords="5,5,74,31"/>
+<area shape="rect" id="node2" href="$class_fish.html" title="{Fish\n|# xDest\l# yDest\l# moveTime\l# foodEaten\l# direction\l# hungerTime\l# fullTimeLimit\l# speed\l|+ Fish()\l+ operator=()\l+ eatFood()\l+ move()\l+ getSize()\l+ getFoodEaten()\l+ getDirection()\l+ getHungerTime()\l+ getFoodNeeded()\l+ getFullTimeLimit()\l+ getSpeed()\l+ isHungry()\l}" alt="" coords="5,220,144,533"/>
+<area shape="rect" id="node3" href="$class_position.html" title="{Position\n|# xPos\l# yPos\l|+ Position()\l+ Position()\l+ ~Position()\l+ getXPos()\l+ getYPos()\l+ setXPos()\l+ setYPos()\l}" alt="" coords="26,5,123,172"/>
 </map>

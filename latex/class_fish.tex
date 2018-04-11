@@ -1,0 +1,219 @@
+\hypertarget{class_fish}{}\section{Fish Class Reference}
+\label{class_fish}\index{Fish@{Fish}}
+
+
+{\ttfamily \#include $<$Fish.\+hpp$>$}
+
+
+
+Inheritance diagram for Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_fish__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Fish\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_fish__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_fish_a265fa9dc23037b5f621ff5f2b2731e9b}{Fish}} ()
+\item 
+\mbox{\hyperlink{class_fish}{Fish}} \& \mbox{\hyperlink{class_fish_a45789c6c8ecafbcfae866845f34a7f33}{operator=}} (const \mbox{\hyperlink{class_fish}{Fish}} \&F)
+\item 
+virtual void \mbox{\hyperlink{class_fish_aad629fb35c786b2a44c1204d011f9ae4}{eat\+Food}} ()=0
+\item 
+void \mbox{\hyperlink{class_fish_ae746baf504f478e83b7b314b7e80eb48}{move}} (double, double, double, bool)
+\item 
+int \mbox{\hyperlink{class_fish_a00b7df960ce799914b15b0e95ecfa4c8}{get\+Size}} () const
+\item 
+int \mbox{\hyperlink{class_fish_a43f71b5e1940fec9aee01ba7ecb7cc5b}{get\+Food\+Eaten}} () const
+\item 
+bool \mbox{\hyperlink{class_fish_a411294175d2104ba12bf205b529f59bd}{get\+Direction}} () const
+\item 
+int \mbox{\hyperlink{class_fish_aca713642313f9c438e900235c0c727d6}{get\+Hunger\+Time}} () const
+\item 
+int \mbox{\hyperlink{class_fish_a5ebfe16e94d3e605d703efbd47aa2a07}{get\+Food\+Needed}} () const
+\item 
+int \mbox{\hyperlink{class_fish_a40a7508eeee947749bc76e67eeca01cc}{get\+Full\+Time\+Limit}} () const
+\item 
+int \mbox{\hyperlink{class_fish_af495566d33b8e3b83605a8222bc02783}{get\+Speed}} () const
+\item 
+bool \mbox{\hyperlink{class_fish_a0b45770c92baa9471ae6dc2ebf15d159}{is\+Hungry}} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{class_fish_a8016badef0a39101994d62825dc69504}{x\+Dest}}
+\item 
+double \mbox{\hyperlink{class_fish_a27b5905734d7d9f8f3a87fca6fbe2018}{y\+Dest}}
+\item 
+double \mbox{\hyperlink{class_fish_a44bb72a7856095a8fc17f59b45602bad}{move\+Time}}
+\item 
+int \mbox{\hyperlink{class_fish_aff94d90077eb91db9f32c518b1dda1aa}{food\+Eaten}}
+\item 
+bool \mbox{\hyperlink{class_fish_aad304102219bdb3d333df50d8a74fd9d}{direction}}
+\item 
+int \mbox{\hyperlink{class_fish_a3fc20ca5c769db904d67492f578ecd9a}{hunger\+Time}}
+\item 
+const int \mbox{\hyperlink{class_fish_aaeccf31f823eb7319bb5201dbf05174a}{full\+Time\+Limit}} = 40
+\item 
+const int \mbox{\hyperlink{class_fish_a2f84c2eeb84451bc55156ae9da753cc9}{speed}} = 40
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_fish_a265fa9dc23037b5f621ff5f2b2731e9b}\label{class_fish_a265fa9dc23037b5f621ff5f2b2731e9b}} 
+\index{Fish@{Fish}!Fish@{Fish}}
+\index{Fish@{Fish}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{Fish()}{Fish()}}
+{\footnotesize\ttfamily Fish\+::\+Fish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_fish_aad629fb35c786b2a44c1204d011f9ae4}\label{class_fish_aad629fb35c786b2a44c1204d011f9ae4}} 
+\index{Fish@{Fish}!eat\+Food@{eat\+Food}}
+\index{eat\+Food@{eat\+Food}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{eat\+Food()}{eatFood()}}
+{\footnotesize\ttfamily virtual void Fish\+::eat\+Food (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_guppy_a50115297f5c2f4df46e3613e09db115e}{Guppy}}, and \mbox{\hyperlink{class_piranha_a50992b83e072f8719150d302469a462f}{Piranha}}.
+
+\mbox{\Hypertarget{class_fish_a411294175d2104ba12bf205b529f59bd}\label{class_fish_a411294175d2104ba12bf205b529f59bd}} 
+\index{Fish@{Fish}!get\+Direction@{get\+Direction}}
+\index{get\+Direction@{get\+Direction}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Direction()}{getDirection()}}
+{\footnotesize\ttfamily bool Fish\+::get\+Direction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_a43f71b5e1940fec9aee01ba7ecb7cc5b}\label{class_fish_a43f71b5e1940fec9aee01ba7ecb7cc5b}} 
+\index{Fish@{Fish}!get\+Food\+Eaten@{get\+Food\+Eaten}}
+\index{get\+Food\+Eaten@{get\+Food\+Eaten}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Food\+Eaten()}{getFoodEaten()}}
+{\footnotesize\ttfamily int Fish\+::get\+Food\+Eaten (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_a5ebfe16e94d3e605d703efbd47aa2a07}\label{class_fish_a5ebfe16e94d3e605d703efbd47aa2a07}} 
+\index{Fish@{Fish}!get\+Food\+Needed@{get\+Food\+Needed}}
+\index{get\+Food\+Needed@{get\+Food\+Needed}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Food\+Needed()}{getFoodNeeded()}}
+{\footnotesize\ttfamily int Fish\+::get\+Food\+Needed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_a40a7508eeee947749bc76e67eeca01cc}\label{class_fish_a40a7508eeee947749bc76e67eeca01cc}} 
+\index{Fish@{Fish}!get\+Full\+Time\+Limit@{get\+Full\+Time\+Limit}}
+\index{get\+Full\+Time\+Limit@{get\+Full\+Time\+Limit}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Full\+Time\+Limit()}{getFullTimeLimit()}}
+{\footnotesize\ttfamily int Fish\+::get\+Full\+Time\+Limit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_aca713642313f9c438e900235c0c727d6}\label{class_fish_aca713642313f9c438e900235c0c727d6}} 
+\index{Fish@{Fish}!get\+Hunger\+Time@{get\+Hunger\+Time}}
+\index{get\+Hunger\+Time@{get\+Hunger\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Hunger\+Time()}{getHungerTime()}}
+{\footnotesize\ttfamily int Fish\+::get\+Hunger\+Time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_a00b7df960ce799914b15b0e95ecfa4c8}\label{class_fish_a00b7df960ce799914b15b0e95ecfa4c8}} 
+\index{Fish@{Fish}!get\+Size@{get\+Size}}
+\index{get\+Size@{get\+Size}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Size()}{getSize()}}
+{\footnotesize\ttfamily int Fish\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_af495566d33b8e3b83605a8222bc02783}\label{class_fish_af495566d33b8e3b83605a8222bc02783}} 
+\index{Fish@{Fish}!get\+Speed@{get\+Speed}}
+\index{get\+Speed@{get\+Speed}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{get\+Speed()}{getSpeed()}}
+{\footnotesize\ttfamily int Fish\+::get\+Speed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_a0b45770c92baa9471ae6dc2ebf15d159}\label{class_fish_a0b45770c92baa9471ae6dc2ebf15d159}} 
+\index{Fish@{Fish}!is\+Hungry@{is\+Hungry}}
+\index{is\+Hungry@{is\+Hungry}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{is\+Hungry()}{isHungry()}}
+{\footnotesize\ttfamily bool Fish\+::is\+Hungry (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\mbox{\Hypertarget{class_fish_ae746baf504f478e83b7b314b7e80eb48}\label{class_fish_ae746baf504f478e83b7b314b7e80eb48}} 
+\index{Fish@{Fish}!move@{move}}
+\index{move@{move}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Fish\+::move (\begin{DoxyParamCaption}\item[{double}]{x,  }\item[{double}]{y,  }\item[{double}]{t,  }\item[{bool}]{hunt\+Food }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_fish_a45789c6c8ecafbcfae866845f34a7f33}\label{class_fish_a45789c6c8ecafbcfae866845f34a7f33}} 
+\index{Fish@{Fish}!operator=@{operator=}}
+\index{operator=@{operator=}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_fish}{Fish}} \& Fish\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_fish}{Fish}} \&}]{F }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{class_fish_a45789c6c8ecafbcfae866845f34a7f33_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{class_fish_aad304102219bdb3d333df50d8a74fd9d}\label{class_fish_aad304102219bdb3d333df50d8a74fd9d}} 
+\index{Fish@{Fish}!direction@{direction}}
+\index{direction@{direction}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily bool Fish\+::direction\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_aff94d90077eb91db9f32c518b1dda1aa}\label{class_fish_aff94d90077eb91db9f32c518b1dda1aa}} 
+\index{Fish@{Fish}!food\+Eaten@{food\+Eaten}}
+\index{food\+Eaten@{food\+Eaten}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{food\+Eaten}{foodEaten}}
+{\footnotesize\ttfamily int Fish\+::food\+Eaten\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_aaeccf31f823eb7319bb5201dbf05174a}\label{class_fish_aaeccf31f823eb7319bb5201dbf05174a}} 
+\index{Fish@{Fish}!full\+Time\+Limit@{full\+Time\+Limit}}
+\index{full\+Time\+Limit@{full\+Time\+Limit}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{full\+Time\+Limit}{fullTimeLimit}}
+{\footnotesize\ttfamily const int Fish\+::full\+Time\+Limit = 40\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_a3fc20ca5c769db904d67492f578ecd9a}\label{class_fish_a3fc20ca5c769db904d67492f578ecd9a}} 
+\index{Fish@{Fish}!hunger\+Time@{hunger\+Time}}
+\index{hunger\+Time@{hunger\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{hunger\+Time}{hungerTime}}
+{\footnotesize\ttfamily int Fish\+::hunger\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_a44bb72a7856095a8fc17f59b45602bad}\label{class_fish_a44bb72a7856095a8fc17f59b45602bad}} 
+\index{Fish@{Fish}!move\+Time@{move\+Time}}
+\index{move\+Time@{move\+Time}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{move\+Time}{moveTime}}
+{\footnotesize\ttfamily double Fish\+::move\+Time\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_a2f84c2eeb84451bc55156ae9da753cc9}\label{class_fish_a2f84c2eeb84451bc55156ae9da753cc9}} 
+\index{Fish@{Fish}!speed@{speed}}
+\index{speed@{speed}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily const int Fish\+::speed = 40\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_a8016badef0a39101994d62825dc69504}\label{class_fish_a8016badef0a39101994d62825dc69504}} 
+\index{Fish@{Fish}!x\+Dest@{x\+Dest}}
+\index{x\+Dest@{x\+Dest}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{x\+Dest}{xDest}}
+{\footnotesize\ttfamily double Fish\+::x\+Dest\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_fish_a27b5905734d7d9f8f3a87fca6fbe2018}\label{class_fish_a27b5905734d7d9f8f3a87fca6fbe2018}} 
+\index{Fish@{Fish}!y\+Dest@{y\+Dest}}
+\index{y\+Dest@{y\+Dest}!Fish@{Fish}}
+\subsubsection{\texorpdfstring{y\+Dest}{yDest}}
+{\footnotesize\ttfamily double Fish\+::y\+Dest\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_fish_8hpp}{Fish.\+hpp}}\item 
+\mbox{\hyperlink{_fish_8cpp}{Fish.\+cpp}}\end{DoxyCompactItemize}

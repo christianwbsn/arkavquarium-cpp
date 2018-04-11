@@ -12,5 +12,5 @@ var searchData=
   ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
   ['money',['money',['../class_aquarium.html#a763165a06487cca929dfe5601a9254cb',1,'Aquarium']]],
   ['move',['move',['../class_coin.html#a58a2a28aa6c21f0045983755dad015dc',1,'Coin::move()'],['../class_fish.html#ae746baf504f478e83b7b314b7e80eb48',1,'Fish::move()'],['../class_fish_food.html#ab4dac48078ac8d5d1442c4fc4f4b8971',1,'FishFood::move()'],['../class_snail.html#a7db73c2ca4146c04e7e37e444c15b08d',1,'Snail::move()']]],
-  ['movetime',['moveTime',['../class_fish.html#a44bb72a7856095a8fc17f59b45602bad',1,'Fish']]]
+  ['movetime',['moveTime',['../class_fish.html#a44bb72a7856095a8fc17f59b45602bad',1,'Fish::moveTime()'],['../class_snail.html#a16550c11e1c28bdd178cc0300436f054',1,'Snail::moveTime()']]]
 ];

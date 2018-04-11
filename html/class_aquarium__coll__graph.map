@@ -1,8 +1,19 @@
 <map id="Aquarium" name="Aquarium">
-<area shape="rect" id="node2" href="$class_linked_list.html" title="LinkedList\&lt; Piranha \&gt;" alt="" coords="128,5,279,31"/>
-<area shape="rect" id="node3" href="$class_linked_list.html" title="LinkedList\&lt; FishFood \&gt;" alt="" coords="123,55,283,80"/>
-<area shape="rect" id="node4" href="$class_snail.html" title="Snail" alt="" coords="178,104,229,129"/>
-<area shape="rect" id="node5" href="$class_position.html" title="Position" alt="" coords="5,104,74,129"/>
-<area shape="rect" id="node6" href="$class_linked_list.html" title="LinkedList\&lt; Guppy \&gt;" alt="" coords="132,153,275,179"/>
-<area shape="rect" id="node7" href="$class_linked_list.html" title="LinkedList\&lt; Coin \&gt;" alt="" coords="138,203,269,228"/>
+<area shape="rect" id="node2" href="$class_linked_list.html" title="{LinkedList\&lt; Piranha \&gt;\n||+ LinkedList()\l+ getFirst()\l+ getLast()\l+ isEmpty()\l+ getSize()\l+ find()\l+ add()\l+ remove()\l+ get()\l+ printList()\l}" alt="" coords="488,1425,638,1619"/>
+<area shape="rect" id="node3" href="$structnode.html" title="{node\&lt; Piranha \&gt;\n||}" alt="" coords="523,1211,643,1284"/>
+<area shape="rect" id="node4" href="$class_piranha.html" title="{Piranha\n||+ Piranha()\l+ extractCoin()\l+ eatFood()\l+ operator=()\l}" alt="" coords="528,769,637,883"/>
+<area shape="rect" id="node5" href="$class_fish.html" title="{Fish\n|# xDest\l# yDest\l# moveTime\l# foodEaten\l# direction\l# hungerTime\l# fullTimeLimit\l# speed\l|+ Fish()\l+ operator=()\l+ eatFood()\l+ move()\l+ getSize()\l+ getFoodEaten()\l+ getDirection()\l+ getHungerTime()\l+ getFoodNeeded()\l+ getFullTimeLimit()\l+ getSpeed()\l+ isHungry()\l}" alt="" coords="513,221,652,535"/>
+<area shape="rect" id="node16" href="$class_guppy.html" title="{Guppy\n|&#45; size\l&#45; coinTime\l&#45; coinValue\l&#45; foodEaten\l&#45; baseCoinTime\l|+ Guppy()\l+ operator=()\l+ getSize()\l+ getCoinValue()\l+ getCoinTime()\l+ setCoinTime()\l+ eatFood()\l+ grow()\l+ extractCoin()\l}" alt="" coords="369,709,490,943"/>
+<area shape="rect" id="node6" href="$class_position.html" title="{Position\n|# xPos\l# yPos\l|+ Position()\l+ Position()\l+ ~Position()\l+ getXPos()\l+ getYPos()\l+ setXPos()\l+ setYPos()\l}" alt="" coords="660,5,756,172"/>
+<area shape="rect" id="node12" href="$class_fish_food.html" title="{FishFood\n||+ FishFood()\l+ FishFood()\l+ move()\l+ operator=()\l}" alt="" coords="700,565,799,679"/>
+<area shape="rect" id="node13" href="$class_snail.html" title="{Snail\n|&#45; xDest\l&#45; moveTime\l&#45; direction\l|+ Snail()\l+ Snail()\l+ operator=()\l+ getDirection()\l+ move()\l}" alt="" coords="849,967,962,1120"/>
+<area shape="rect" id="node19" href="$class_coin.html" title="{Coin\n|&#45; value\l|+ Coin()\l+ Coin()\l+ getValue()\l+ operator=()\l+ move()\l}" alt="" coords="84,559,183,685"/>
+<area shape="rect" id="node7" href="$structnode.html" title="{node\&lt; T \&gt;\n|+ next\l|}" alt="" coords="233,789,314,863"/>
+<area shape="rect" id="node11" href="$structnode.html" title="{node\&lt; FishFood \&gt;\n||}" alt="" coords="727,1211,857,1284"/>
+<area shape="rect" id="node15" href="$structnode.html" title="{node\&lt; Guppy \&gt;\n||}" alt="" coords="190,1211,303,1284"/>
+<area shape="rect" id="node18" href="$structnode.html" title="{node\&lt; Coin \&gt;\n||}" alt="" coords="5,1211,107,1284"/>
+<area shape="rect" id="node9" href="$class_linked_list.html" title="{LinkedList\&lt; T \&gt;\n|&#45; first\l&#45; last\l|+ LinkedList()\l+ getFirst()\l+ getLast()\l+ isEmpty()\l+ getSize()\l+ find()\l+ add()\l+ remove()\l+ get()\l+ printList()\l}" alt="" coords="387,1144,499,1351"/>
+<area shape="rect" id="node10" href="$class_linked_list.html" title="{LinkedList\&lt; FishFood \&gt;\n||+ LinkedList()\l+ getFirst()\l+ getLast()\l+ isEmpty()\l+ getSize()\l+ find()\l+ add()\l+ remove()\l+ get()\l+ printList()\l}" alt="" coords="661,1425,821,1619"/>
+<area shape="rect" id="node14" href="$class_linked_list.html" title="{LinkedList\&lt; Guppy \&gt;\n||+ LinkedList()\l+ getFirst()\l+ getLast()\l+ isEmpty()\l+ getSize()\l+ find()\l+ add()\l+ remove()\l+ get()\l+ printList()\l}" alt="" coords="320,1425,464,1619"/>
+<area shape="rect" id="node17" href="$class_linked_list.html" title="{LinkedList\&lt; Coin \&gt;\n||+ LinkedList()\l+ getFirst()\l+ getLast()\l+ isEmpty()\l+ getSize()\l+ find()\l+ add()\l+ remove()\l+ get()\l+ printList()\l}" alt="" coords="165,1425,297,1619"/>
 </map>

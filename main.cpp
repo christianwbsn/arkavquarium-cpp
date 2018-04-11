@@ -20,17 +20,11 @@ int main( int argc, char* args[] )
     std::string egg_text = "Egg: Undefined";
     std::string egg_bought = "Egg: Undefined";
 
-    // Posisi ikan
-    double cy = SCREEN_HEIGHT / 2;
-    double cx = SCREEN_WIDTH / 2;
-
     bool running = true;
 
     double prevtime = time_since_start();
 
     Aquarium aq;
-    cy = aq.getSnail().getYPos();
-    cx = aq.getSnail().getXPos();
 
     double click_x = 0;
     double click_y = 0;
@@ -102,12 +96,6 @@ int main( int argc, char* args[] )
 			// Proses masukan yang bersifat "tombol"
 			for (auto key : get_tapped_keys()) {
 				switch (key) {
-				// r untuk reset
-				case SDLK_r:{
-					cy = SCREEN_HEIGHT / 2;
-					cx = SCREEN_WIDTH / 2;
-					break;
-				}
 				// x untuk keluar
 				case SDLK_x:{
 					running = false;
