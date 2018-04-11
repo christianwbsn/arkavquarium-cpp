@@ -15,13 +15,13 @@ Aquarium::Aquarium() {
 }
 
 // Destruktor akuarium dan seluruh object di dalamnya
-Aquarium::~Aquarium() {
+Aquarium::~Aquarium(){
 }
 
 // getter ukuran dari akuarium
-// LinkedList<Piranha> Aquarium::getListOfPiranha() const {
-//     return this->listOfPiranha;
-// }
+LinkedList<Piranha> Aquarium::getListOfPiranha() const {
+    return this->listOfPiranha;
+}
 LinkedList<Guppy> Aquarium::getListOfGuppy() const {
     return this->listOfGuppy;
 }
@@ -37,16 +37,6 @@ Snail& Aquarium::getSnail(){
     return this->snail;
 }
 
-// getter object in position (x,y)
-Guppy Aquarium::getGuppy(double x, double y) const {
-
-}
-
-Coin Aquarium::getCoin(double x, double y) const {
-}
-
-FishFood Aquarium::getFishFood(double x, double y) const {
-}
 
 int Aquarium::getMoney(){
     return this->money;
