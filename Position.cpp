@@ -8,6 +8,9 @@ Position::Position(double _x, double _y){
     this->x = _x;
     this->y = _y;
 }
+Position::~Position(){
+    
+}
 double Position::getX() { return this->x; }
 double Position::getY() { return this->y; }
 void Position::setX(double _x) {
