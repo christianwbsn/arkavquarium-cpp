@@ -1,0 +1,5 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_snail.html#a3f644d3bcf495e6811c973bd514effb6" title="Snail::getXPos" alt="" coords="114,5,223,31"/>
+<area shape="rect" id="node3" href="$class_snail.html#afde745a4f07f44efc7cb13ac62b28601" title="Snail::getYPos" alt="" coords="114,55,223,80"/>
+<area shape="rect" id="node4" href="$class_snail.html#a6d4963dcad74dd82410cc6f7d4106a82" title="Snail::getDirection" alt="" coords="104,104,233,129"/>
+</map>

@@ -30,7 +30,6 @@ double Snail :: getYPos() const{
     
 //menggerakkan snail
 void Snail :: move(double _x, double t, bool huntcoin){
-    cout << _x << endl;
     if(huntcoin){
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = _x;

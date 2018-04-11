@@ -1,0 +1,6 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$class_coin.html#a0e8ef8f6d9202e06bbdf355f9b51884e" title="Coin::getValue" alt="" coords="104,5,211,31"/>
+<area shape="rect" id="node3" href="$class_coin.html#a1442767a5bcb452366a8796367ca65ca" title="Coin::getXPos" alt="" coords="104,55,211,80"/>
+<area shape="rect" id="node4" href="$class_coin.html#a73368e754e5f8c8f789d3992708eddca" title="Coin::getYPos" alt="" coords="104,104,211,129"/>
+<area shape="rect" id="node5" href="$class_coin.html#a58a2a28aa6c21f0045983755dad015dc" title="Coin::move" alt="" coords="113,153,202,179"/>
+</map>

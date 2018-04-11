@@ -2,10 +2,8 @@
 #include <iostream>
 
 Aquarium::Aquarium() {
-    Snail S(590.0);
-    std::cout<<S.getXPos()<<std::endl;
+    Snail S((double)(rand() % 640 + 1));
     this->snail = S;
-    std::cout<<this->snail.getXPos()<<std::endl;
     this->money = 50;
     this->egg = 0;
     Guppy ikan1;
