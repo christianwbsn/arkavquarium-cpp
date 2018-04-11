@@ -101,7 +101,6 @@ int main( int argc, char* args[] )
 				}
 			}
 			
-			double mult;
 			// Proses masukan yang bersifat "tombol"
 			for (auto key : get_tapped_keys()) {
 				switch (key) {

@@ -29,6 +29,7 @@ Fish& Fish :: operator=(const Fish& F){
     return *this;
 }
 void Fish::move(double x, double y, double t, bool huntFood){
+	double mult;
     if(huntFood){
         this->moveTime = (rand()%45 + 5)*0.1;
         this->xDest = x;
@@ -52,8 +53,14 @@ void Fish::move(double x, double y, double t, bool huntFood){
         this->moveTime -= t;
     }
     double a = atan2(this->xDest-xPos,this->yDest-yPos);
-    this->xPos += this->speed*sin(a)*t;
-    this->yPos += this->speed*cos(a)*t;
+    if (huntFood) {
+		mult = 1.3;
+	}
+    else {
+		mult = 1;
+	}
+    this->xPos += mult*this->speed*sin(a)*t;
+    this->yPos += mult*this->speed*cos(a)*t;
     // cout << x << ":" << y << ":" << a << endl;
 }
 bool Fish::getDirection() const{

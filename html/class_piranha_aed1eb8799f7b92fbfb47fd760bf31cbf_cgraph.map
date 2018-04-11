@@ -1,4 +1,4 @@
 <map id="Piranha::extractCoin" name="Piranha::extractCoin">
-<area shape="rect" id="node2" href="$class_fish.html#af14780afc74e6c0d403e15efed252d42" title="Fish::getXPos" alt="" coords="195,5,300,31"/>
-<area shape="rect" id="node3" href="$class_fish.html#abaef432b3efd480b87ac02ba93c32775" title="Fish::getYPos" alt="" coords="195,55,300,80"/>
+<area shape="rect" id="node2" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="195,5,322,31"/>
+<area shape="rect" id="node3" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="195,55,322,80"/>
 </map>

@@ -4,8 +4,8 @@
 <area shape="rect" id="node4" href="$class_guppy.html#a95cab69dac975dcdf44f0fdc698764e1" title="Guppy::setCoinTime" alt="" coords="106,104,248,129"/>
 <area shape="rect" id="node5" href="$class_guppy.html#a6942e7c88e8de7b15d9ca40169eae418" title="Guppy::getCoinValue" alt="" coords="104,153,251,179"/>
 <area shape="rect" id="node6" href="$class_guppy.html#a50115297f5c2f4df46e3613e09db115e" title="Guppy::eatFood" alt="" coords="119,203,236,228"/>
-<area shape="rect" id="node7" href="$class_guppy.html#a342d7b7c5a5c456b2acfa03a8e24494e" title="Guppy::grow" alt="" coords="302,216,399,241"/>
+<area shape="rect" id="node7" href="$class_guppy.html#a342d7b7c5a5c456b2acfa03a8e24494e" title="Guppy::grow" alt="" coords="313,216,410,241"/>
 <area shape="rect" id="node8" href="$class_guppy.html#ab3fef72b059ac88a3e901af4db113e1d" title="Guppy::extractCoin" alt="" coords="109,304,245,329"/>
-<area shape="rect" id="node9" href="$class_fish.html#af14780afc74e6c0d403e15efed252d42" title="Fish::getXPos" alt="" coords="299,279,403,304"/>
-<area shape="rect" id="node10" href="$class_fish.html#abaef432b3efd480b87ac02ba93c32775" title="Fish::getYPos" alt="" coords="299,328,403,353"/>
+<area shape="rect" id="node9" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="299,279,425,304"/>
+<area shape="rect" id="node10" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="299,328,425,353"/>
 </map>

@@ -1,7 +1,8 @@
 <map id="Aquarium" name="Aquarium">
-<area shape="rect" id="node2" href="$class_linked_list.html" title="LinkedList\&lt; Piranha \&gt;" alt="" coords="10,5,160,31"/>
-<area shape="rect" id="node3" href="$class_linked_list.html" title="LinkedList\&lt; FishFood \&gt;" alt="" coords="5,55,165,80"/>
-<area shape="rect" id="node4" href="$class_snail.html" title="Snail" alt="" coords="60,104,111,129"/>
-<area shape="rect" id="node5" href="$class_linked_list.html" title="LinkedList\&lt; Guppy \&gt;" alt="" coords="13,153,157,179"/>
-<area shape="rect" id="node6" href="$class_linked_list.html" title="LinkedList\&lt; Coin \&gt;" alt="" coords="19,203,151,228"/>
+<area shape="rect" id="node2" href="$class_linked_list.html" title="LinkedList\&lt; Piranha \&gt;" alt="" coords="128,5,279,31"/>
+<area shape="rect" id="node3" href="$class_linked_list.html" title="LinkedList\&lt; FishFood \&gt;" alt="" coords="123,55,283,80"/>
+<area shape="rect" id="node4" href="$class_snail.html" title="Snail" alt="" coords="178,104,229,129"/>
+<area shape="rect" id="node5" href="$class_position.html" title="Position" alt="" coords="5,104,74,129"/>
+<area shape="rect" id="node6" href="$class_linked_list.html" title="LinkedList\&lt; Guppy \&gt;" alt="" coords="132,153,275,179"/>
+<area shape="rect" id="node7" href="$class_linked_list.html" title="LinkedList\&lt; Coin \&gt;" alt="" coords="138,203,269,228"/>
 </map>

@@ -1,5 +1,6 @@
 <map id="Piranha.hpp" name="Piranha.hpp">
-<area shape="rect" id="node2" href="$_fish_8hpp.html" title="Fish.hpp" alt="" coords="16,152,88,177"/>
-<area shape="rect" id="node5" href="$_guppy_8hpp.html" title="Guppy.hpp" alt="" coords="49,79,135,104"/>
-<area shape="rect" id="node4" href="$_coin_8hpp.html" title="Coin.hpp" alt="" coords="52,225,127,251"/>
+<area shape="rect" id="node2" href="$_fish_8hpp.html" title="Fish.hpp" alt="" coords="81,152,154,177"/>
+<area shape="rect" id="node6" href="$_guppy_8hpp.html" title="Guppy.hpp" alt="" coords="155,79,240,104"/>
+<area shape="rect" id="node4" href="$_coin_8hpp.html" title="Coin.hpp" alt="" coords="58,225,132,251"/>
+<area shape="rect" id="node5" href="$_position_8hpp.html" title="Position.hpp" alt="" coords="122,299,217,324"/>
 </map>

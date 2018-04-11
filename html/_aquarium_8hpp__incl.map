@@ -1,9 +1,10 @@
 <map id="Aquarium.hpp" name="Aquarium.hpp">
 <area shape="rect" id="node2" href="$_linked_list_8hpp.html" title="LinkedList.hpp" alt="" coords="5,152,113,177"/>
-<area shape="rect" id="node4" href="$_fish_8hpp.html" title="Fish.hpp" alt="" coords="219,225,291,251"/>
-<area shape="rect" id="node6" href="$_snail_8hpp.html" title="Snail.hpp" alt="" coords="111,225,188,251"/>
-<area shape="rect" id="node7" href="$_piranha_8hpp.html" title="Piranha.hpp" alt="" coords="238,79,331,104"/>
-<area shape="rect" id="node8" href="$_guppy_8hpp.html" title="Guppy.hpp" alt="" coords="292,152,378,177"/>
-<area shape="rect" id="node9" href="$_fish_food_8hpp.html" title="FishFood.hpp" alt="" coords="353,299,456,324"/>
-<area shape="rect" id="node5" href="$_coin_8hpp.html" title="Coin.hpp" alt="" coords="187,299,262,324"/>
+<area shape="rect" id="node4" href="$_fish_8hpp.html" title="Fish.hpp" alt="" coords="367,225,439,251"/>
+<area shape="rect" id="node6" href="$_position_8hpp.html" title="Position.hpp" alt="" coords="396,372,490,397"/>
+<area shape="rect" id="node7" href="$_snail_8hpp.html" title="Snail.hpp" alt="" coords="217,299,293,324"/>
+<area shape="rect" id="node8" href="$_piranha_8hpp.html" title="Piranha.hpp" alt="" coords="354,79,447,104"/>
+<area shape="rect" id="node9" href="$_guppy_8hpp.html" title="Guppy.hpp" alt="" coords="440,152,526,177"/>
+<area shape="rect" id="node10" href="$_fish_food_8hpp.html" title="FishFood.hpp" alt="" coords="90,299,193,324"/>
+<area shape="rect" id="node5" href="$_coin_8hpp.html" title="Coin.hpp" alt="" coords="368,299,443,324"/>
 </map>

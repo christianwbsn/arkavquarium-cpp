@@ -1,4 +1,4 @@
 <map id="Guppy::extractCoin" name="Guppy::extractCoin">
-<area shape="rect" id="node2" href="$class_fish.html#af14780afc74e6c0d403e15efed252d42" title="Fish::getXPos" alt="" coords="189,5,293,31"/>
-<area shape="rect" id="node3" href="$class_fish.html#abaef432b3efd480b87ac02ba93c32775" title="Fish::getYPos" alt="" coords="189,55,293,80"/>
+<area shape="rect" id="node2" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="189,5,315,31"/>
+<area shape="rect" id="node3" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="189,55,315,80"/>
 </map>

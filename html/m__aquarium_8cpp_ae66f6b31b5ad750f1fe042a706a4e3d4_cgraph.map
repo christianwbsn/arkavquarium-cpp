@@ -5,6 +5,6 @@
 <area shape="rect" id="node5" href="$class_aquarium.html#a79a5a5912b8c6834076e41a84ea685d4" title="Aquarium::getListOfCoin" alt="" coords="118,153,284,179"/>
 <area shape="rect" id="node6" href="$class_aquarium.html#a6ed0710ca821f906910746ac883c9db8" title="Aquarium::getListOfFishFood" alt="" coords="104,203,298,228"/>
 <area shape="rect" id="node7" href="$class_aquarium.html#aeba34bc057163d89f62f7ed06fad4075" title="Aquarium::getSnail" alt="" coords="134,252,268,277"/>
-<area shape="rect" id="node8" href="$class_snail.html#a3f644d3bcf495e6811c973bd514effb6" title="Snail::getXPos" alt="" coords="147,301,255,327"/>
-<area shape="rect" id="node9" href="$class_snail.html#afde745a4f07f44efc7cb13ac62b28601" title="Snail::getYPos" alt="" coords="147,351,255,376"/>
+<area shape="rect" id="node8" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="138,301,264,327"/>
+<area shape="rect" id="node9" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="138,351,264,376"/>
 </map>

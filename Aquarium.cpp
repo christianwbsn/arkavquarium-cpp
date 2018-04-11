@@ -4,7 +4,7 @@
 Aquarium::Aquarium() {
     Snail S((double)(rand() % 640 + 1));
     this->snail = S;
-    this->money = 50;
+    this->money = 500;
     this->egg = 0;
     Guppy ikan1;
     this->listOfGuppy.add(ikan1);

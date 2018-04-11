@@ -1,4 +1,4 @@
 <map id="FishFood::operator=" name="FishFood::operator=">
-<area shape="rect" id="node2" href="$class_fish_food.html#aac13a6342f0d9f46d23f3274b3fa1058" title="FishFood::getYPos" alt="" coords="195,5,330,31"/>
-<area shape="rect" id="node3" href="$class_fish_food.html#aaa3f64222a3101dd815995471dbcc741" title="FishFood::getXPos" alt="" coords="195,55,330,80"/>
+<area shape="rect" id="node2" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="195,5,322,31"/>
+<area shape="rect" id="node3" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="195,55,322,80"/>
 </map>

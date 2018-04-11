@@ -1,4 +1,4 @@
 <map id="Coin::operator=" name="Coin::operator=">
-<area shape="rect" id="node2" href="$class_coin.html#a1442767a5bcb452366a8796367ca65ca" title="Coin::getXPos" alt="" coords="167,5,274,31"/>
-<area shape="rect" id="node3" href="$class_coin.html#a73368e754e5f8c8f789d3992708eddca" title="Coin::getYPos" alt="" coords="167,55,274,80"/>
+<area shape="rect" id="node2" href="$class_position.html#acf61dbee6b964bd1c402eb5f6ba42201" title="Position::getXPos" alt="" coords="167,5,294,31"/>
+<area shape="rect" id="node3" href="$class_position.html#a596c79d81a7321bb3310b921d7116e4a" title="Position::getYPos" alt="" coords="167,55,294,80"/>
 </map>
