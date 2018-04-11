@@ -248,10 +248,10 @@ int main( int argc, char* args[] )
             draw_image("images/Food.png",tank.listOfFishFood.get(i).getXPos(),tank.listOfFishFood.get(i).getYPos());
         }
         for(int i=0;i<tank.listOfCoin.getSize();i++){
-            if(tank.listOfCoin.get(i).getValue()==50){
+            if(tank.listOfCoin.get(i).getValue()==25){
                 draw_image("images/Silver_coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
             }
-            else if(tank.listOfCoin.get(i).getValue()==100){
+            else if(tank.listOfCoin.get(i).getValue()==50){
                 draw_image("images/Gold_coin.png",tank.listOfCoin.get(i).getXPos(),tank.listOfCoin.get(i).getYPos());
             }
             else{
@@ -272,7 +272,7 @@ int main( int argc, char* args[] )
                     if(tank.listOfGuppy.get(i).getDirection()){
                         draw_image("images/Medium_Hungry_Guppsy_left_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
                     }else{
-                        draw_image("images/Hungry_Medium_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
+                        draw_image("images/Medium_Hungry_Guppsy_right_side.png",tank.listOfGuppy.get(i).getXPos(),tank.listOfGuppy.get(i).getYPos());
                     }
                 }
                 else if(tank.listOfGuppy.get(i).getSize()==3){
