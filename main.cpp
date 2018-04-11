@@ -95,7 +95,7 @@ int main( int argc, char* args[] )
 				if(!isCoin){
 					if(tank.getMoney() >= 10){
 						tank.decreaseMoney(10);
-						FishFood food(click_x,50);
+						FishFood food(click_x, click_y);
 						tank.listOfFishFood.add(food);
 					}
 				}
