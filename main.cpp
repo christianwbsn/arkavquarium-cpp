@@ -380,9 +380,19 @@ int main( int argc, char* args[] )
 				}
 				tank.getSnail().move(xx, sec_since_last,huntcoin);
 				if(tank.getSnail().getDirection()){
-					draw_image("images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					if (huntcoin) {
+						draw_image("images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					}
+					else {
+						draw_image("images/Snail_shel.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					}
 				}else{
-					draw_image("images/Snail_right_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					if (huntcoin) {
+						draw_image("images/Snail_right_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					}
+					else {
+						draw_image("images/Snail_shel_right.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+					}
 				}
 			}
 			else{
