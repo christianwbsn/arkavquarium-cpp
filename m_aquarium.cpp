@@ -7,7 +7,7 @@ using namespace std;
 
 
 int main() {
-    Aquarium tank;
+    Aquarium tank; cout << "Constructor Aquarium called." << endl;
     Guppy G1,G2,G3;
     Coin C1,C2;
     tank.listOfGuppy.add(G1);

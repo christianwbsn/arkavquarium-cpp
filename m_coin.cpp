@@ -3,9 +3,9 @@
 using namespace std;
 
 int main() {
-    Coin C1(100,100,50);
-    Coin C2(200,50,50);
-    Coin C3;
+    Coin C1(100,100,50);cout << "Constructor Coin called" << endl;
+    Coin C2(200,50,50);cout << "Constructor Coin called" << endl;
+    Coin C3;cout << "Constructor Coin called" << endl;
     cout << "Coin C1:" << C1.getValue() << endl;
     cout << "Position: (" << C1.getXPos() << "," << C1.getYPos() << ")" << endl;
     cout << "Coin C2:" << C2.getValue() << endl;
