@@ -22,6 +22,7 @@ public:
     Coin operator=(const Coin& C);
     //move
     void move(double t);
+    void setYPos(double _y);
 
 };
 #endif
