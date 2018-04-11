@@ -54,6 +54,15 @@ int main( int argc, char* args[] )
             //WIN
             win = true;
         }
+        else if(tank.getEgg()==0){
+            draw_image("images/Egg_L1.png", 570, 30);
+        }
+        else if(tank.getEgg()==1){
+            draw_image("images/Egg_L2.png", 570, 30);
+        }
+        else if(tank.getEgg()==2){
+            draw_image("images/Egg_L3.png", 570, 30);
+        }
 
         if(get_change_click()){
             reset_click_change();
@@ -368,6 +377,7 @@ int main( int argc, char* args[] )
             }
             else{
                 xx = (double)(rand() % SCREEN_WIDTH + 1);
+                huntcoin = false;
             }
             cout << xx << endl;
             tank.getSnail().move(xx, sec_since_last,huntcoin);
@@ -378,6 +388,9 @@ int main( int argc, char* args[] )
             }
             update_screen();
         }
+        else{
+			draw_text("You Win",  50, 320, 240, 255, 0, 0);
+		}
     }
 
     close();
