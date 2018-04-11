@@ -7,10 +7,8 @@ const int SCREEN_HEIGHT = 480;
 
 using namespace std;
 
-Fish::Fish()
+Fish::Fish() : Position((double)(rand() % SCREEN_WIDTH + 1),(double)(rand() % SCREEN_HEIGHT + 1))
 {
-    this->xPos = (double)(rand() % SCREEN_WIDTH + 1);
-    this->yPos = (double)(rand() % SCREEN_HEIGHT + 1);
     this->xDest = 0.0;
     this->yDest = 0.0;
     this->moveTime = 0;

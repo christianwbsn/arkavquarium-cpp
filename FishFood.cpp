@@ -1,22 +1,13 @@
 #include "FishFood.hpp"
 
-FishFood :: FishFood(){
-    xPos = 0.0;
-    yPos = 0.0;
+FishFood :: FishFood() : Position(){
+
 }
 
-FishFood :: FishFood(double _xpos,double _ypos){
-    xPos= _xpos;
-    yPos= _ypos;
+FishFood :: FishFood(double _xpos,double _ypos) : Position(_xpos,_ypos){
+
 }
 
-double FishFood :: getXPos() const{
-    return xPos;
-}
-
-double FishFood :: getYPos() const{
-    return yPos;
-}
 
 void FishFood :: move(double t){
     this->yPos += 20*t;

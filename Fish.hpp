@@ -6,10 +6,8 @@
 #include "Coin.hpp"
 using namespace std;
 
-class Fish{
+class Fish:public Position{
 protected:
-    double xPos;
-    double yPos;
     double xDest;
     double yDest;
     double moveTime;
@@ -31,8 +29,6 @@ public:
     void move(double, double, double, bool);
 
     //Getter
-    double getXPos() const;
-    double getYPos() const;
     int getSize() const;
     int getFoodEaten() const;
     bool getDirection() const;

@@ -3,17 +3,12 @@
 #include <iostream>
 using namespace std;
 
-class FishFood{
-private:
-    double xPos;
-    double yPos;
+class FishFood:public Position{
 public:
     //konstruktor
     FishFood();
     FishFood(double,double);
     //getter
-    double getXPos() const;
-    double getYPos() const;
     void move(double t);
     FishFood operator=(const FishFood& F);
 };

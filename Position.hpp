@@ -5,16 +5,16 @@
 
 class Position{
     protected:
-        double x;
-        double y;
+        double xPos;
+        double yPos;
     public:
         Position();
         Position(double _x, double _y);
         ~Position();
-        double getX();
-        double getY();
-        void setX(double _x);
-        void setY(double _y);
+        double getXPos();
+        double getYPos();
+        void setXPos(double _x);
+        void setYPos(double _y);
 };
 
 #endif

@@ -1,21 +1,21 @@
 #include "Position.hpp"
 
 Position::Position() {
-    this->x = 0.0;
-    this->y = 0.0;
+    this->xPos = 0.0;
+    this->yPos = 0.0;
 }
 Position::Position(double _x, double _y){
-    this->x = _x;
-    this->y = _y;
+    this->xPos = _x;
+    this->yPos = _y;
 }
 Position::~Position(){
     
 }
-double Position::getX() { return this->x; }
-double Position::getY() { return this->y; }
-void Position::setX(double _x) {
-    this->x = _x;
+double Position::getXPos() { return this->xPos; }
+double Position::getYPos() { return this->yPos; }
+void Position::setXPos(double _x) {
+    this->xPos = _x;
 }
-void Position::setY(double _y){
-    this->y = _y;
+void Position::setYPos(double _y){
+    this->yPos = _y;
 }

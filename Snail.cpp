@@ -1,14 +1,12 @@
 #include <cmath>
 #include "Snail.hpp"
 //konstruktor
-Snail :: Snail(){
-    xPos = 0.0;
+Snail :: Snail():Position(0.0,450.0){
     xDest = 0.0;
     moveTime = 0;
     direction = true;
 }
-Snail :: Snail(double _xpos){
-    xPos = _xpos;
+Snail :: Snail(double _xpos) : Position(_xpos,450.0){
     xDest = 0.0;
     moveTime = 0;
     direction = true;
@@ -20,14 +18,7 @@ Snail Snail :: operator=(const Snail& S) {
     this->xDest = 0.0;
     return *this;
 }
-//getter
-double Snail :: getXPos() const{
-    return xPos;
-}
-double Snail :: getYPos() const{
-    return yPos;
-}
-    
+
 //menggerakkan snail
 void Snail :: move(double _x, double t, bool huntcoin){
     if(huntcoin){
