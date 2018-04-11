@@ -28,7 +28,7 @@ public:
     ~Aquarium();
 
     // getter ukuran dari akuarium
-    // LinkedList<Piranha> getListOfPiranha() const;
+    LinkedList<Piranha> getListOfPiranha() const;
     LinkedList<Guppy> getListOfGuppy() const;
     LinkedList<Coin> getListOfCoin() const;
     LinkedList<FishFood> getListOfFishFood() const;  
@@ -36,10 +36,6 @@ public:
 
     Snail& getSnail();
 
-    // getter object in position (x,y)
-    Guppy getGuppy(double, double) const;
-    Coin getCoin(double, double) const;
-    FishFood getFishFood(double, double) const;
     int getMoney();
     int getEgg();
     void buyEgg();
