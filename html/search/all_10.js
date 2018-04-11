@@ -9,6 +9,6 @@ var searchData=
   ['snail',['Snail',['../class_snail.html',1,'Snail'],['../class_snail.html#ac5501ca7ead01b2ba0b7286503599f68',1,'Snail::Snail()'],['../class_snail.html#a89de76e5c6b4087c0ed7ac2809f0c45b',1,'Snail::Snail(double)'],['../class_aquarium.html#a031f639386ae1f30bda7d97f75781b17',1,'Aquarium::snail()']]],
   ['snail_2ecpp',['Snail.cpp',['../_snail_8cpp.html',1,'']]],
   ['snail_2ehpp',['Snail.hpp',['../_snail_8hpp.html',1,'']]],
-  ['speed',['speed',['../class_fish.html#a2f84c2eeb84451bc55156ae9da753cc9',1,'Fish::speed()'],['../main_8cpp.html#a71fd37308050cd439537c5c6c2cb4614',1,'speed():&#160;main.cpp']]],
+  ['speed',['speed',['../class_fish.html#a2f84c2eeb84451bc55156ae9da753cc9',1,'Fish']]],
   ['start',['start',['../oop_8cpp.html#a1735b8c468a759db2a102e031c6b1436',1,'oop.cpp']]]
 ];
