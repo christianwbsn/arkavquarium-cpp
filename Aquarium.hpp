@@ -8,6 +8,7 @@
 #include "Piranha.hpp"
 #include "Guppy.hpp"
 #include "FishFood.hpp"
+#include "Position.hpp"
 
 class Aquarium {
 friend Fish;

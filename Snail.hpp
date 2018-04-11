@@ -1,6 +1,7 @@
 #ifndef __SNAIL_HPP
 #define __SNAIL_HPP
 
+#include "Position.hpp"
 #include <iostream>
 using namespace std;
 

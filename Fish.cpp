@@ -56,14 +56,6 @@ void Fish::move(double x, double y, double t, bool huntFood){
     this->yPos += this->speed*cos(a)*t;
     // cout << x << ":" << y << ":" << a << endl;
 }
-
-double Fish::getXPos() const{
-    return this->xPos;
-}
-
-double Fish::getYPos() const{
-    return this->yPos;
-}
 bool Fish::getDirection() const{
     return this->direction;
 }

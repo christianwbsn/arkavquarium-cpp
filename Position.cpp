@@ -11,8 +11,8 @@ Position::Position(double _x, double _y){
 Position::~Position(){
     
 }
-double Position::getXPos() { return this->xPos; }
-double Position::getYPos() { return this->yPos; }
+double Position::getXPos() const { return this->xPos; }
+double Position::getYPos() const { return this->yPos; }
 void Position::setXPos(double _x) {
     this->xPos = _x;
 }

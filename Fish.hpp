@@ -4,6 +4,7 @@
 #include <iostream>
 
 #include "Coin.hpp"
+#include "Position.hpp"
 using namespace std;
 
 class Fish:public Position{

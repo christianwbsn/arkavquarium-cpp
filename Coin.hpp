@@ -4,6 +4,7 @@
 #define __COIN_HPP
 
 #include <iostream>
+#include "Position.hpp"
 using namespace std;
 
 class Coin:public Position{

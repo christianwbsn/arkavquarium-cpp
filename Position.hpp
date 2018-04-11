@@ -11,8 +11,8 @@ class Position{
         Position();
         Position(double _x, double _y);
         ~Position();
-        double getXPos();
-        double getYPos();
+        double getXPos() const;
+        double getYPos() const;
         void setXPos(double _x);
         void setYPos(double _y);
 };

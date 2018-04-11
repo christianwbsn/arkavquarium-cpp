@@ -1,6 +1,7 @@
 #ifndef __GUPPY_HPP
 #define __GUPPY_HPP
 #include "Fish.hpp"
+#include "Position.hpp"
 using namespace std;
 
 class Guppy : public Fish{

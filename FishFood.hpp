@@ -1,5 +1,6 @@
 #ifndef __FISHFOOD_HPP
 #define __FISHFOOD_HPP
+#include "Position.hpp"
 #include <iostream>
 using namespace std;
 
