@@ -26,6 +26,10 @@ void Coin :: move(double t){
     yPos+= 20*t;
 }
 
+void Coin::setYPos(double _y){
+    yPos = _y;
+}
+
 Coin Coin :: operator=(const Coin& C){
     this->xPos = C.getXPos();
     this->yPos = C.getYPos();

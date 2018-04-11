@@ -74,7 +74,7 @@ int main( int argc, char* args[] )
             if(!isCoin){
                 if(tank.getMoney() >= 10){
                     tank.decreaseMoney(10);
-                    FishFood food(click_x,click_y);
+                    FishFood food(click_x,50);
                     tank.listOfFishFood.add(food);
                 }
             }
@@ -329,15 +329,15 @@ int main( int argc, char* args[] )
                 
             }
             for(int i=0;i<tank.listOfFishFood.getSize();i++){
-                if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfFishFood.get(i).getYPos() < 0){
+                if(tank.listOfFishFood.get(i).getXPos() > SCREEN_WIDTH || tank.listOfFishFood.get(i).getXPos() < 0 || tank.listOfFishFood.get(i).getYPos() >= 450.0 || tank.listOfFishFood.get(i).getYPos() < 0){
                     tank.listOfFishFood.remove(tank.listOfFishFood.get(i));
                 }else{
                     tank.listOfFishFood.get(i).move(sec_since_last);
                 }
             }
             for(int i=0;i<tank.listOfCoin.getSize();i++){
-                if(tank.listOfCoin.get(i).getXPos() > SCREEN_WIDTH || tank.listOfCoin.get(i).getXPos() < 0 || tank.listOfCoin.get(i).getYPos() > SCREEN_HEIGHT || tank.listOfCoin.get(i).getYPos() < 0){
-                    tank.listOfCoin.remove(tank.listOfCoin.get(i));
+                if(tank.listOfCoin.get(i).getYPos() >= 450.0){
+                    tank.listOfCoin.get(i).setYPos(450.0);
                 }else{
                     tank.listOfCoin.get(i).move(sec_since_last);
                 }
