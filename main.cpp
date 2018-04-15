@@ -1,5 +1,5 @@
-#include "oop.hpp"
-#include "Aquarium.hpp"
+#include "src/oop.hpp"
+#include "src/Aquarium.hpp"
 #include <iostream>
 #include <math.h>
 #include <sstream>
@@ -28,7 +28,7 @@ int main(int argc, char *args[])
         clear_screen();
 
         //Add background
-        draw_image("images/Aquarium4.jpg", 320.0, 240.0);
+        draw_image("assets/images/Aquarium4.jpg", 320.0, 240.0);
 
         double now = time_since_start();
         double sec_since_last = now - prevtime;
@@ -61,11 +61,11 @@ int main(int argc, char *args[])
 
         if (win)
         {
-            draw_image("images/Win.png", 320, 240);
+            draw_image("assets/images/Win.png", 320, 240);
         }
         else if (lose)
         {
-            draw_image("images/Lose.png", 320, 240);
+            draw_image("assets/images/Lose.png", 320, 240);
         }
         else
         {
@@ -363,22 +363,22 @@ int main(int argc, char *args[])
                 {
                     if (tank.listOfPiranha.get(i).getDirection())
                     {
-                        draw_image("images/Piranha_Hungry_left_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
+                        draw_image("assets/images/Piranha_Hungry_left_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
                     }
                     else
                     {
-                        draw_image("images/Piranha_Hungry_right_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
+                        draw_image("assets/images/Piranha_Hungry_right_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
                     }
                 }
                 else
                 {
                     if (tank.listOfPiranha.get(i).getDirection())
                     {
-                        draw_image("images/Piranha_left_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
+                        draw_image("assets/images/Piranha_left_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
                     }
                     else
                     {
-                        draw_image("images/Piranha_right_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
+                        draw_image("assets/images/Piranha_right_side.png", tank.listOfPiranha.get(i).getXPos(), tank.listOfPiranha.get(i).getYPos());
                     }
                 }
             }
@@ -392,33 +392,33 @@ int main(int argc, char *args[])
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Small_Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Small_Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Small_Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Small_Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                     else if (tank.listOfGuppy.get(i).getSize() == 2)
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Medium_Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Medium_Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Medium_Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Medium_Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                     else if (tank.listOfGuppy.get(i).getSize() == 3)
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Hungry_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Hungry_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                 }
@@ -428,33 +428,33 @@ int main(int argc, char *args[])
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Small_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Small_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Small_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Small_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                     else if (tank.listOfGuppy.get(i).getSize() == 2)
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Medium_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Medium_Guppsy_left_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Medium_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Medium_Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                     else if (tank.listOfGuppy.get(i).getSize() == 3)
                     {
                         if (tank.listOfGuppy.get(i).getDirection())
                         {
-                            draw_image("images/Guppsy.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Guppsy.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                         else
                         {
-                            draw_image("images/Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
+                            draw_image("assets/images/Guppsy_right_side.png", tank.listOfGuppy.get(i).getXPos(), tank.listOfGuppy.get(i).getYPos());
                         }
                     }
                 }
@@ -463,7 +463,7 @@ int main(int argc, char *args[])
             //Draw Fish Food
             for (int i = 0; i < tank.listOfFishFood.getSize(); i++)
             {
-                draw_image("images/Food.png", tank.listOfFishFood.get(i).getXPos(), tank.listOfFishFood.get(i).getYPos());
+                draw_image("assets/images/Food.png", tank.listOfFishFood.get(i).getXPos(), tank.listOfFishFood.get(i).getYPos());
             }
 
             //Draw Coin
@@ -471,15 +471,15 @@ int main(int argc, char *args[])
             {
                 if (tank.listOfCoin.get(i).getValue() == 25)
                 {
-                    draw_image("images/Silver_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
+                    draw_image("assets/images/Silver_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
                 }
                 else if (tank.listOfCoin.get(i).getValue() == 50)
                 {
-                    draw_image("images/Gold_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
+                    draw_image("assets/images/Gold_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
                 }
                 else
                 {
-                    draw_image("images/Diamond_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
+                    draw_image("assets/images/Diamond_coin.png", tank.listOfCoin.get(i).getXPos(), tank.listOfCoin.get(i).getYPos());
                 }
             }
 
@@ -488,37 +488,37 @@ int main(int argc, char *args[])
             {
                 if (huntcoin)
                 {
-                    draw_image("images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+                    draw_image("assets/images/Snail_left_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
                 }
                 else
                 {
-                    draw_image("images/Snail_shel.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+                    draw_image("assets/images/Snail_shel.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
                 }
             }
             else
             {
                 if (huntcoin)
                 {
-                    draw_image("images/Snail_right_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+                    draw_image("assets/images/Snail_right_side.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
                 }
                 else
                 {
-                    draw_image("images/Snail_shel_right.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
+                    draw_image("assets/images/Snail_shel_right.png", tank.getSnail().getXPos(), tank.getSnail().getYPos());
                 }
             }
 
             // Draw egg
             if (tank.getEgg() == 0)
             {
-                draw_image("images/Egg_L1.png", 570, 30);
+                draw_image("assets/images/Egg_L1.png", 570, 30);
             }
             else if (tank.getEgg() == 1)
             {
-                draw_image("images/Egg_L2.png", 570, 30);
+                draw_image("assets/images/Egg_L2.png", 570, 30);
             }
             else if (tank.getEgg() == 2)
             {
-                draw_image("images/Egg_L3.png", 570, 30);
+                draw_image("assets/images/Egg_L3.png", 570, 30);
             }
         }
         update_screen();
